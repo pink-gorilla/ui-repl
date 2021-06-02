@@ -5,8 +5,6 @@
 
 
 ; cljs functions
-
-
 (add-cljs-namespace [ajax.core]) ; http library
 (add-cljs-namespace [pinkgorilla.repl.goldly.core])
 (add-cljs-namespace [pinkie.default-setup]) ; pinkie
@@ -42,5 +40,5 @@
 
 (add-cljs-bindings
  {; math
-  'sin ui.goldly.fun/sin ; test bindings
+  'sin pinkgorilla.repl.fun/sin ; test bindings
   })
