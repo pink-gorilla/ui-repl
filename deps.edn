@@ -41,7 +41,7 @@
 
   :npm-install
   {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"
-                                        :exclusions  [org.pinkgorilla/ui-site]
+                                        :exclusions  [org.pinkgorilla/ui-repl]
                                         }}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "npm-install"
