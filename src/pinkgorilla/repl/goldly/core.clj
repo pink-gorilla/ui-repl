@@ -5,6 +5,8 @@
 
 
 ; cljs functions
+
+
 (add-cljs-namespace [ajax.core]) ; http library
 (add-cljs-namespace [pinkgorilla.repl.goldly.core])
 (add-cljs-namespace [pinkie.default-setup]) ; pinkie
