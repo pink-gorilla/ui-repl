@@ -7,6 +7,12 @@
    #_[pinkgorilla.notebook-app.system])
   (:import (java.io PushbackReader)))
 
+
+; tools.deps add-lib dynamic
+;(require '[clojure.tools.deps.alpha.repl :refer [add-lib]])
+;(add-lib 'domain/library {:mvn/version "RELEASE"})
+
+
 (defn add-dependencies
   "Use Pomegranate to add dependencies 
    with Maven Central and Clojars as default repositories.
