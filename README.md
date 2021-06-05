@@ -17,5 +17,8 @@ clojure -P -X:goldly   ; to fetch last released goldly
 clojure -X:goldly
 ```
 
+`clojure -M:test-addlib`
+
+
 
 

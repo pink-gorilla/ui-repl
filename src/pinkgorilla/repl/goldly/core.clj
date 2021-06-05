@@ -1,7 +1,18 @@
 (ns pinkgorilla.repl.goldly.core
   (:require
    [taoensso.timbre :as timbre :refer [info warn error]]
+   [pinkgorilla.repl :refer [add-require]]
    [goldly.sci.bindings :refer [add-cljs-namespace add-cljs-bindings generate-bindings]]))
+
+
+; clj 
+
+
+;(add-require '[clojure.tools.deps.alpha.repl :refer [add-libs libs find-lib]])
+
+
+(add-require '[clojure.pprint :as pprint :refer [print-table]])
+
 
 
 ; cljs functions

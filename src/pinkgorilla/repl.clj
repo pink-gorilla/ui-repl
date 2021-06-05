@@ -2,35 +2,40 @@
   "important stuff that will be needed by notebook users.
    it should be easy to find this functions, so they in one namespace."
   (:require
-   [cemerick.pomegranate :as pg]
-   [clojure.java.io :as io]
-   #_[pinkgorilla.notebook-app.system])
+   ;[cemerick.pomegranate :as pg]
+   ;[clojure.tools.deps.alpha.repl :refer [add-libs]]
+   [clojure.java.io :as io])
   (:import (java.io PushbackReader)))
+
+(def default-requires-atom (atom []))
+
+(defn add-require [r]
+  (swap! default-requires-atom conj r))
+
+(defmacro require-default []
+  (let [rs @default-requires-atom]
+    (concat (list 'do) (map (fn [r] (list 'require `(quote ~r))) rs))))
+
+(comment
+  (add-require '[clojure.string :as str])
+  (add-require '[clojure.pprint :as pprint])
+  (add-require '[clojure.pprint :as pprint :refer [print-table]])
+  @default-requires-atom
+
+  (macroexpand '(default-requires))
+  (default-requires)
+  (str/join ["a" "b"])
+  (pprint/print-table [{:a 1 :b 2} {:a "s" :b 45545}])
+  (print-table [{:a 1 :b 2} {:a "s" :b 45545}])
+ ; 
+  )
+
 
 
 ; tools.deps add-lib dynamic
 ;(require '[clojure.tools.deps.alpha.repl :refer [add-lib]])
-;(add-lib 'domain/library {:mvn/version "RELEASE"})
+;(add-libs {'domain/library {:mvn/version "RELEASE"}})
 
-
-(defn add-dependencies
-  "Use Pomegranate to add dependencies 
-   with Maven Central and Clojars as default repositories.
-   Same Syntax as clojupyter
-   stolen from: https://github.com/clojupyter/clojupyter/blob/40c6d47ec9c9e4634c8e28fca3209b5c3ac8430c/src/clojupyter/misc/helper.clj
-
-   "
-  [dependencies & {:keys [repositories]
-                   :or {repositories {"central" "https://repo1.maven.org/maven2/"
-                                      "clojars" "https://clojars.org/repo"}}}]
-  (let [first-item (first dependencies)]
-    (if (vector? first-item)
-      ; [ [dep1] [dep2]]
-      (pg/add-dependencies :coordinates `~dependencies
-                           :repositories repositories)
-      ; [dep1]
-      (pg/add-dependencies :coordinates `[~dependencies]
-                           :repositories repositories))))
 
 (defn load-edn- [resource]
   (when resource
