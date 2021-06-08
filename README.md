@@ -2,8 +2,8 @@
 
 useful REPL (clj + cljs) functions
 
-This functions are not in goldly (which provides cls kernel) or nrel-middleware (which provides clj kernel).
-This functions are not many, but if they are icluded in the kernels, it is more difficult to
+This functions are not in goldly (which provides cls kernel) or nrepl-middleware (which provides clj kernel).
+This functions are not many, but if they are included in the kernels, it is more difficult to
 test and fine tune the functions.
 
 ## End-Users

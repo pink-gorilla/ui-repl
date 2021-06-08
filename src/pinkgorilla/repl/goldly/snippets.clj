@@ -8,5 +8,15 @@
 
 (add-snippet {:type :goldly
               :category :repl
-              :id :template
-              :filename "snippets/repl/template.clj"})
+              :id :alert
+              :filename "snippets/repl/alert.clj"})
+
+(add-snippet {:type :goldly
+              :category :repl
+              :id :http
+              :filename "snippets/repl/http.clj"})
+
+(add-snippet {:type :goldly
+              :category :repl
+              :id :dialog
+              :filename "snippets/repl/dialog.clj"})

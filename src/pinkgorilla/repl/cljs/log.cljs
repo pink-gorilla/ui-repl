@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.log)
+(ns pinkgorilla.repl.cljs.log)
 
 (defn log! [l & args]
    ;(timbre/log! l :p args {:?line 77})

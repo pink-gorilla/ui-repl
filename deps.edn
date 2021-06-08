@@ -5,12 +5,15 @@
          ]
  :deps
  {org.clojure/clojure    {:mvn/version "1.10.3"}
-  cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
+  ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
+  cljs-http/cljs-http {:mvn/version "0.1.46"}
 
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
   ;                 :sha "241cd24c35ba770aea4773ea161d45276e5d3a73"}
+  ; dependency conflict on guava
+  ; you'll need the version the closure compiler expects
   }
  :aliases
  {;https://github.com/applied-science/deps-library

@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.exception
+(ns pinkgorilla.repl.cljs.exception
   (:require
    [pinkie.pinkie :refer-macros [register-component]]))
 
