@@ -7,7 +7,8 @@
 
 (defn- make-get [process]
   (fn [url a path & [opts]]
-    (let [opts (or opts {})]
+    (let [opts (or opts {:with-credentials? false  ; true blocks remote api with corsrequests
+                         })]
       (go (let [response (<! (http/get url opts))
                 body (:body response)
                 _ (println "body: " body "type: " (type body))
