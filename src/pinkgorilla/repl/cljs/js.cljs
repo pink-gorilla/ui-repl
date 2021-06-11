@@ -8,6 +8,9 @@
 (defn timeout [f ms]
   (js/setTimeout f ms))
 
+(defn interval [f ms]
+  (js/setInterval f ms))
+
 #_(defn repeat [f ms]
     (.setTimeout
      js/window

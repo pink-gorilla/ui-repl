@@ -55,6 +55,7 @@
 (add-cljs-bindings
  {'parse-float pinkgorilla.repl.cljs.js/parse-float
   'timeout pinkgorilla.repl.cljs.js/timeout
+  'interval pinkgorilla.repl.cljs.js/interval
   'alert pinkgorilla.repl.cljs.js/alert
   'evt-val pinkgorilla.repl.cljs.js/evt-val
   ; math
