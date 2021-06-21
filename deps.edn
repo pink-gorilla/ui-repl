@@ -1,7 +1,5 @@
 {:paths ["src"
          "resources" ; snippets
-         ;"target/webly" ; webly bundel
-         ;"target/node_modules" ; npm module css
          ]
  :deps
  {org.clojure/clojure    {:mvn/version "1.10.3"}
@@ -23,10 +21,10 @@
 
   ; https://github.com/weavejester/cljfmt
   :cljfmt
-  {:extra-deps {cljfmt/cljfmt {:mvn/version "0.7.0"}}
+  {:extra-deps {cljfmt/cljfmt {:mvn/version "RELEASE"}}
    :main-opts ["-m" "cljfmt.main" "check" "--indents" "cljfmt.edn"]}
   :cljfmt-fix
-  {:extra-deps {cljfmt/cljfmt {:mvn/version "0.7.0"}}
+  {:extra-deps {cljfmt/cljfmt {:mvn/version "RELEASE"}}
    :main-opts ["-m" "cljfmt.main" "fix" "--indents" "cljfmt.edn"]}
 
  ; https://github.com/clj-kondo/clj-kondo/blob/master/doc/jvm.md
@@ -53,8 +51,7 @@
                                         }}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "npm-install"
-               :config {:goldly {:extensions [[ui.site.goldly.core]
-                                              [ui.site.goldly.snippets]]}}}}
+               :config {:goldly {:extensions []}}}}
 
   :goldly
   {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"
@@ -62,8 +59,7 @@
                                         }}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
-               :config {:goldly {:extensions [[pinkgorilla.repl.goldly.core]
-                                              [pinkgorilla.repl.goldly.snippets]]}}}}
+               :config {:goldly {:extensions []}}}}
 
   :webly
   {:extra-deps {org.pinkgorilla/webly {:mvn/version "RELEASE"}}

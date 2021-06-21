@@ -1,0 +1,51 @@
+{:name "ui-repl"
+ :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
+
+ :cljs-namespace [pinkgorilla.repl.goldly.core
+                  pinkie.default-setup] ; pinkie]
+
+ :cljs-bindings {; webly
+                 'nav pinkgorilla.repl.cljs.webly/nav
+                 'notify pinkgorilla.repl.cljs.webly/notify
+                 'dialog pinkgorilla.repl.cljs.webly/dialog
+                 ; goldly
+                 'set-system-state pinkgorilla.repl.cljs.goldly/set-system-state
+                 'clipboard-set pinkgorilla.repl.clipboard/clipboard-set  ; missing .cljs because used in goldly
+                 'clipboard-pop pinkgorilla.repl.clipboard/clipboard-pop
+                 ;'bindings pinkgorilla.repl.cljs.goldly/bindings
+                 ; pinkie
+                 'pinkie-render pinkie.pinkie-render/pinkie-render
+                 'text pinkie.text/text
+                 ; logging
+                 'println println
+                 'info pinkgorilla.repl.cljs.log/info
+                 'warn pinkgorilla.repl.cljs.log/warn
+                 'error pinkgorilla.repl.cljs.log/error
+                 ; http
+                 'get-str pinkgorilla.repl.cljs.http/get-str
+                 'get-edn pinkgorilla.repl.cljs.http/get-edn
+                 'get-json pinkgorilla.repl.cljs.http/get-json
+                 ;
+                 'parse-float pinkgorilla.repl.cljs.js/parse-float
+                 'timeout pinkgorilla.repl.cljs.js/timeout
+                 'interval pinkgorilla.repl.cljs.js/interval
+                 'alert pinkgorilla.repl.cljs.js/alert
+                 'evt-val pinkgorilla.repl.cljs.js/evt-val
+                 ; math
+                 'sin pinkgorilla.repl.cljs.js/sin ; test bindings
+                 }
+
+ :cljs-ns-bindings {}
+ :snippets [{:type :goldly
+             :category :repl
+             :id :alert
+             :filename "snippets/repl/alert.clj"}
+            {:type :goldly
+             :category :repl
+             :id :http
+             :filename "snippets/repl/http.clj"}
+            {:type :goldly
+             :category :repl
+             :id :dialog
+             :filename "snippets/repl/dialog.clj"}]}
+

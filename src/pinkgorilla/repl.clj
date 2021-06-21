@@ -29,13 +29,9 @@
   (print-table [{:a 1 :b 2} {:a "s" :b 45545}])
  ; 
   )
-
-
-
 ; tools.deps add-lib dynamic
 ;(require '[clojure.tools.deps.alpha.repl :refer [add-lib]])
 ;(add-libs {'domain/library {:mvn/version "RELEASE"}})
-
 
 (defn load-edn- [resource]
   (when resource
