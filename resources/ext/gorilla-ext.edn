@@ -1,10 +1,13 @@
 {:name "ui-repl"
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
 
- :cljs-namespace [pinkgorilla.repl.goldly.core
+ :cljs-namespace [pinkgorilla.repl.cljs.core
                   pinkie.default-setup] ; pinkie]
 
- :cljs-bindings {; webly
+ :cljs-bindings {;reframe
+                 'app-db pinkgorilla.repl.cljs.reframe/app-db
+                 
+                 ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
@@ -37,6 +40,10 @@
 
  :cljs-ns-bindings {}
  :snippets [{:type :goldly
+             :category :repl
+             :id :appdb
+             :filename "snippets/repl/appdb.clj"}
+            {:type :goldly
              :category :repl
              :id :alert
              :filename "snippets/repl/alert.clj"}

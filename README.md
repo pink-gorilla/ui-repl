@@ -13,9 +13,10 @@ test and fine tune the functions.
 ## Demo
 
 ```
-clojure -P -X:goldly   ; to fetch last released goldly
 clojure -X:goldly
 ```
+
+## tools.deps.alpha - addlib test
 
 `clojure -M:test-addlib`
 
