@@ -2,6 +2,7 @@
   (:require
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [re-frame.core :as rf]
+   [webly.web.routes :as wr]
    [webly.user.notifications.core :refer [add-notification]]))
 
 ; this is a clojurescript namespace
@@ -10,6 +11,9 @@
 (defn nav [& args]
   (rf/dispatch (into [] (concat [:bidi/goto] args))))
 
+(defn current-route []
+  @wr/current)
+
 (defn dialog [f & [size]]
   (if size
     (rf/dispatch [:modal/open f :small])
@@ -17,5 +21,8 @@
 
 (defn notify [s]
   (add-notification s))
+
+
+
 
 

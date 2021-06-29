@@ -9,6 +9,7 @@
                  
                  ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
+                 'current-route pinkgorilla.repl.cljs.webly/current-route
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
                  ; goldly
