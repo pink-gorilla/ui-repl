@@ -38,7 +38,11 @@
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
                  }
 
- :cljs-ns-bindings {}
+ :cljs-ns-bindings {'r {'atom reagent.core/atom}
+                    'rf {'dispatch re-frame.core/dispatch
+                         'subscribe re-frame.core/subscribe}
+                    }
+ 
  :snippets [{:type :goldly
              :category :repl
              :id :appdb
