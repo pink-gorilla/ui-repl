@@ -6,7 +6,7 @@
 
  :cljs-bindings {;reframe
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
-                 
+                 'format goog.string/format
                  ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
                  'current-route pinkgorilla.repl.cljs.webly/current-route
