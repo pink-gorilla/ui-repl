@@ -41,9 +41,16 @@
 
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
                     'rf {'dispatch re-frame.core/dispatch
-                         'subscribe re-frame.core/subscribe}
-                    }
- 
+                         'subscribe re-frame.core/subscribe}}
+
+ :theme {:available  {}
+         :current {}}
+
+ ; modules and pinkie not yet via loader
+ :pinkie {}
+ :modules {}
+
+
  :snippets [{:type :goldly
              :category :repl
              :id :appdb
