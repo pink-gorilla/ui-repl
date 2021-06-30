@@ -3,12 +3,7 @@
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [re-frame.core :as rf]
    [goog.string :as gstring]
-   [goog.string.format]
-   
-   ))
-
-
-
+   [goog.string.format]))
 
 ; this is a clojurescript namespace
 ; functions that should be available to all goldly systems
