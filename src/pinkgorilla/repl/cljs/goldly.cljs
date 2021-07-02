@@ -1,9 +1,7 @@
 (ns pinkgorilla.repl.cljs.goldly
   (:require
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
-   [re-frame.core :as rf]
-   ;[goldly-bindings-generated]
-   ))
+   [re-frame.core :as rf]))
 
 ; this is a clojurescript namespace
 ; functions that should be available to all goldly systems
@@ -12,11 +10,6 @@
   (rf/dispatch [:goldly/set-system-state {:system-id system-id
                                           :result result
                                           :where where}]))
-
-#_(defn bindings []
-    (-> goldly-bindings-generated/bindings-generated
-        keys))
-
 
 
 

@@ -3,6 +3,7 @@
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [re-frame.core :as rf]
    [webly.web.routes :as wr]
+   [webly.web.handler] ; side-effects
    [webly.user.notifications.core :refer [add-notification]]))
 
 ; this is a clojurescript namespace

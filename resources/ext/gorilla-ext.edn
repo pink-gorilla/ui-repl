@@ -1,40 +1,48 @@
 {:name "ui-repl"
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
 
- :cljs-namespace [pinkgorilla.repl.cljs.core
-                  pinkie.default-setup] ; pinkie]
+ :cljs-namespace [pinkgorilla.repl.cljs.core] 
 
- :cljs-bindings {;reframe
+ :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
-                 'format goog.string/format
+                 
                  ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
                  'current-route pinkgorilla.repl.cljs.webly/current-route
+                 'reagent-page webly.web.handler/reagent-page
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
+
                  ; goldly
                  'set-system-state pinkgorilla.repl.cljs.goldly/set-system-state
                  'clipboard-set pinkgorilla.repl.clipboard/clipboard-set  ; missing .cljs because used in goldly
                  'clipboard-pop pinkgorilla.repl.clipboard/clipboard-pop
-                 ;'bindings pinkgorilla.repl.cljs.goldly/bindings
+                
                  ; pinkie
+                 'register-tag pinkgorilla.repl.cljs.pinkie/register-tag
                  'pinkie-render pinkie.pinkie-render/pinkie-render
+                 'error-boundary pinkie.error/error-boundary
                  'text pinkie.text/text
+
                  ; logging
                  'println println
                  'info pinkgorilla.repl.cljs.log/info
                  'warn pinkgorilla.repl.cljs.log/warn
                  'error pinkgorilla.repl.cljs.log/error
+
                  ; http
                  'get-str pinkgorilla.repl.cljs.http/get-str
                  'get-edn pinkgorilla.repl.cljs.http/get-edn
                  'get-json pinkgorilla.repl.cljs.http/get-json
+
                  ;
+                 'format goog.string/format
                  'parse-float pinkgorilla.repl.cljs.js/parse-float
                  'timeout pinkgorilla.repl.cljs.js/timeout
                  'interval pinkgorilla.repl.cljs.js/interval
                  'alert pinkgorilla.repl.cljs.js/alert
                  'evt-val pinkgorilla.repl.cljs.js/evt-val
+
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
                  }
