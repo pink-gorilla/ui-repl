@@ -5,7 +5,7 @@
  {org.clojure/clojure    {:mvn/version "1.10.3"}
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
-
+  org.pinkgorilla/pinkie {:mvn/version "0.3.10"}
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"

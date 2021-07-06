@@ -4,7 +4,7 @@ rm node_modules -r
 rm target -r
 rm .webly -r
 rm .shadow-cljs -r
-
+rm .cpcache -r
 rm package.json
 rm package-lock.json
 rm karma.conf.js

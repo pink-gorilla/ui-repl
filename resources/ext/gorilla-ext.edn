@@ -1,8 +1,8 @@
 {:name "ui-repl"
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
-
+ :theme {:available  {}
+         :current {}}
  :cljs-namespace [pinkgorilla.repl.cljs.core] 
-
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
                  
@@ -13,17 +13,10 @@
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
 
-                 ; goldly
-                 'set-system-state pinkgorilla.repl.cljs.goldly/set-system-state
+                 ;clipboard
                  'clipboard-set pinkgorilla.repl.clipboard/clipboard-set  ; missing .cljs because used in goldly
                  'clipboard-pop pinkgorilla.repl.clipboard/clipboard-pop
-                
-                 ; pinkie
-                 'register-tag pinkgorilla.repl.cljs.pinkie/register-tag
-                 'pinkie-render pinkie.pinkie-render/pinkie-render
-                 'error-boundary pinkie.error/error-boundary
-                 'text pinkie.text/text
-
+               
                  ; logging
                  'println println
                  'info pinkgorilla.repl.cljs.log/info
@@ -51,12 +44,8 @@
                     'rf {'dispatch re-frame.core/dispatch
                          'subscribe re-frame.core/subscribe}}
 
- :theme {:available  {}
-         :current {}}
-
- ; modules and pinkie not yet via loader
  :pinkie {}
- :modules {}
+ :modules {} ; modules  not yet via loader
 
 
  :snippets [{:type :goldly
