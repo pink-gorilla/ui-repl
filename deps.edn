@@ -6,6 +6,8 @@
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
   org.pinkgorilla/pinkie {:mvn/version "0.3.10"}
+  tick/tick {:mvn/version "0.4.24-alpha"}
+  thi.ng/strf {:mvn/version "0.2.2"}
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
@@ -47,16 +49,14 @@
 
   :npm-install
   {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"
-                                        :exclusions  [org.pinkgorilla/ui-repl]
-                                        }}
+                                        :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "npm-install"
                :config {:goldly {}}}}
 
   :goldly
   {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"
-                                        :exclusions  [org.pinkgorilla/ui-repl]
-                                        }}
+                                        :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
                :config {:goldly {}}}}
@@ -68,7 +68,7 @@
    :exec-args {:profile "watch"
                :config "webly/demo/demo.edn"}}
 
-  
+
   :test-addlib
   {:extra-paths ["dev"]
    :main-opts ["-m" "add-lib-demo"]}

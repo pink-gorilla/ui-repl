@@ -2,10 +2,12 @@
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
  :theme {:available  {}
          :current {}}
- :cljs-namespace [pinkgorilla.repl.cljs.core] 
+ :cljs-namespace [pinkgorilla.repl.cljs.core
+                  tick.alpha.api
+                  thi.ng.strf.core]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
-                 
+
                  ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
                  'current-route pinkgorilla.repl.cljs.webly/current-route
@@ -16,7 +18,7 @@
                  ;clipboard
                  'clipboard-set pinkgorilla.repl.clipboard/clipboard-set  ; missing .cljs because used in goldly
                  'clipboard-pop pinkgorilla.repl.clipboard/clipboard-pop
-               
+
                  ; logging
                  'println println
                  'info pinkgorilla.repl.cljs.log/info
@@ -42,12 +44,13 @@
 
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
                     'rf {'dispatch re-frame.core/dispatch
-                         'subscribe re-frame.core/subscribe}}
-
+                         'subscribe re-frame.core/subscribe}
+                    't {'now tick.alpha.api/now
+                        'time tick.alpha.api/time}
+                    'f {'format thi.ng.strf.core/format
+                        'float thi.ng.strf.core/float}}
  :pinkie {}
- :modules {} ; modules  not yet via loader
-
-
+ :lazy false ; util fns not yet working with lazy loader
  :snippets [{:type :goldly
              :category :repl
              :id :appdb
