@@ -44,7 +44,9 @@
 
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
                     'rf {'dispatch re-frame.core/dispatch
-                         'subscribe re-frame.core/subscribe}
+                         'subscribe re-frame.core/subscribe
+                         'reg-event-db re-frame.core/reg-event-db
+                         'reg-event-fx re-frame.core/reg-event-fx}
                     't {'now tick.alpha.api/now
                         'time tick.alpha.api/time}
                     'f {'format thi.ng.strf.core/format

@@ -13,12 +13,12 @@ test and fine tune the functions.
 ## Demo
 
 ```
-clojure -X:goldly
+clj -X:goldly
 ```
 
 ## tools.deps.alpha - addlib test
 
-`clojure -M:test-addlib`
+`clj -M:test-addlib`
 
 
 
