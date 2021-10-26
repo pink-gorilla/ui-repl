@@ -5,7 +5,7 @@
  {org.clojure/clojure    {:mvn/version "1.10.3"}
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
-  org.pinkgorilla/pinkie {:mvn/version "0.3.10"}
+  org.pinkgorilla/pinkie {:mvn/version "0.3.11"}
   tick/tick {:mvn/version "0.4.24-alpha"}
   thi.ng/strf {:mvn/version "0.2.2"}
   ; addlib3 branch
@@ -55,8 +55,8 @@
                :config {:goldly {}}}}
 
   :goldly
-  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"
-                                        :exclusions  [org.pinkgorilla/ui-repl]}}
+  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.42"
+                                        :exclusions  [org.pinkgorilla/ui-repl]}} ; we are in ui-repl!
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
                :config {:goldly {}}}}

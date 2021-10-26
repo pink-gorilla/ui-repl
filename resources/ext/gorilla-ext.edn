@@ -2,9 +2,11 @@
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
  :theme {:available  {}
          :current {}}
- :cljs-namespace [pinkgorilla.repl.cljs.core
+ :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
                   tick.alpha.api
-                  thi.ng.strf.core]
+                  thi.ng.strf.core
+                  re-frame.core ; so we can use all symbols in bidings rf/
+                  ]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
 
@@ -26,9 +28,9 @@
                  'error pinkgorilla.repl.cljs.log/error
 
                  ; http
-                 'get-str pinkgorilla.repl.cljs.http/get-str
-                 'get-edn pinkgorilla.repl.cljs.http/get-edn
-                 'get-json pinkgorilla.repl.cljs.http/get-json
+                 'get-str pinkgorilla.repl.cljs.http/get-str  ; depreciated (in http ns) - see below
+                 'get-edn pinkgorilla.repl.cljs.http/get-edn ; depreciated (in http ns) - see below
+                 'get-json pinkgorilla.repl.cljs.http/get-json ; depreciated (in http ns) - see below
 
                  ;
                  'format goog.string/format
@@ -47,6 +49,9 @@
                          'subscribe re-frame.core/subscribe
                          'reg-event-db re-frame.core/reg-event-db
                          'reg-event-fx re-frame.core/reg-event-fx}
+                    'http {'get-str pinkgorilla.repl.cljs.http/get-str
+                           'get-edn pinkgorilla.repl.cljs.http/get-edn
+                           'get-json pinkgorilla.repl.cljs.http/get-json}
                     't {'now tick.alpha.api/now
                         'time tick.alpha.api/time}
                     'f {'format thi.ng.strf.core/format
