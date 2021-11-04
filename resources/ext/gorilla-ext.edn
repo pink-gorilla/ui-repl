@@ -3,7 +3,7 @@
  :theme {:available  {}
          :current {}}
  :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
-                  tick.alpha.api
+                  tick.core
                   thi.ng.strf.core
                   re-frame.core ; so we can use all symbols in bidings rf/
                   ]
@@ -52,26 +52,11 @@
                     'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json}
-                    't {'now tick.alpha.api/now
-                        'time tick.alpha.api/time}
+                    't {'now tick.core/now
+                        'time tick.core/time}
                     'f {'format thi.ng.strf.core/format
                         'float thi.ng.strf.core/float}}
  :pinkie {}
  :lazy false ; util fns not yet working with lazy loader
- :snippets [{:type :goldly
-             :category :repl
-             :id :appdb
-             :filename "snippets/repl/appdb.clj"}
-            {:type :goldly
-             :category :repl
-             :id :alert
-             :filename "snippets/repl/alert.clj"}
-            {:type :goldly
-             :category :repl
-             :id :http
-             :filename "snippets/repl/http.clj"}
-            {:type :goldly
-             :category :repl
-             :id :dialog
-             :filename "snippets/repl/dialog.clj"}]}
+ }
 
