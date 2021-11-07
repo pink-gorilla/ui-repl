@@ -5,4 +5,4 @@
    [pinkgorilla.repl.cljs.log]
    [pinkgorilla.repl.cljs.http]
    [pinkgorilla.repl.cljs.reframe]
-   [pinkgorilla.repl.clipboard]))
+   [pinkgorilla.repl.cljs.jsloader]))

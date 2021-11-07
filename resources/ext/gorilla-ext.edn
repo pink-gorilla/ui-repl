@@ -1,6 +1,7 @@
 {:name "ui-repl"
- :clj-require [[clojure.pprint :as pprint :refer [print-table]]]
- :theme {:available  {}
+ ; compile-time
+ :lazy false ; util fns not yet working with lazy loader
+ :theme {:available {}
          :current {}}
  :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
                   tick.core
@@ -16,10 +17,6 @@
                  'reagent-page webly.web.handler/reagent-page
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
-
-                 ;clipboard
-                 'clipboard-set pinkgorilla.repl.clipboard/clipboard-set  ; missing .cljs because used in goldly
-                 'clipboard-pop pinkgorilla.repl.clipboard/clipboard-pop
 
                  ; logging
                  'println println
@@ -40,6 +37,10 @@
                  'alert pinkgorilla.repl.cljs.js/alert
                  'evt-val pinkgorilla.repl.cljs.js/evt-val
 
+                 'with-js pinkgorilla.repl.cljs.jsloader/with-js
+                 'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
+                 'load-always pinkgorilla.repl.cljs.jsloader/load-always
+
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
                  }
@@ -57,6 +58,6 @@
                     'f {'format thi.ng.strf.core/format
                         'float thi.ng.strf.core/float}}
  :pinkie {}
- :lazy false ; util fns not yet working with lazy loader
- }
+ ; runtime
+ :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
 
