@@ -76,7 +76,12 @@
                                                 "devtools/help" :devtools
                                                 "devtools/scratchpad" :scratchpad
                                                 "devtools/viewer" :viewer
-                                                "devtools/environment" :environment}}}}}}
+                                                "devtools/environment" :environment}}}
+                         :devtools {:rdocument  {:storage-root "../../rdocument/"
+                                                 :url-root "/api/rdocument/file/"}
+                                    :collections {:demo-cljs [:cljs "demo/notebook/"]}}
+                        
+                        }}}
 
   :test-addlib
   {:extra-paths ["dev"]
