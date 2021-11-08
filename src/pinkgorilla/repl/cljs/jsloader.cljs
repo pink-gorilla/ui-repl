@@ -1,6 +1,7 @@
 (ns pinkgorilla.repl.cljs.jsloader
   (:require
    [reagent.core :as r]
+   [goog.object :as g]
    [goog.net.jsloader :as jsl]
    [goog.html.legacyconversions :as conv]))
 
