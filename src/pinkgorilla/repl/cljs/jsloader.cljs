@@ -11,6 +11,20 @@
           []
           scripts))
 
+(defn load-js [url]
+  (let [status (r/atom false)
+        p (-> url
+              clj->js
+              conv/trustedResourceUrlFromString
+              jsl/safeLoad)]
+    (.then p
+           (fn [& args]
+            ;(js/console.info "Loaded:" not-loaded)
+             (reset! status true))
+           (fn [& args]
+             (reset! status :error)))
+    status))
+
 (defn js-loader
   "Load a supplied list of Javascript files and render a component
    during loading and another component as soon as every script is

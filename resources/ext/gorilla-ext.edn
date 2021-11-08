@@ -40,6 +40,7 @@
                  'with-js pinkgorilla.repl.cljs.jsloader/with-js
                  'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
                  'load-always pinkgorilla.repl.cljs.jsloader/load-always
+                 'load-js pinkgorilla.repl.cljs.jsloader/load-js
 
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
