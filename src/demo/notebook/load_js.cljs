@@ -7,9 +7,7 @@
 
 (http/application-url)
 
-(http/api-url "/api/test")
-
-(http/ws-origin "/test" (http/application-url))
+(http/ws-origin "/test")
 
 (def movies [{:name "Matrix"}
              {:name "Terminator"}
@@ -18,4 +16,5 @@
 (->> (pprint/print-table movies)
      (.log js/console))
 
-(doc http/api-url)
+; doc is a macro. this does not work...
+;(doc http/api-url)

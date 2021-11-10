@@ -37,20 +37,11 @@
   []
   (url/url (-> js/window .-location .-href)))
 
-(defn api-url
-  "useful to get the api of the server, as the name of the server might be very different
-   (localhost, domain.com  https http, etc)"
+(defn ws-origin
+  "useful to get a websocket to a path on the same server as the website is loaded from"
   [path]
   (let [app-url (application-url)
-        port-postfix  (let [port (:port app-url)]
-                        (if (< 0 port)
-                          (str ":" port)
-                          ""))]
-    (str (:protocol app-url) ":" (:host app-url) port-postfix path)))
-
-(defn ws-origin
-  [path app-url]
-  (let [proto (if (= (:protocol app-url) "http") "ws" "wss")
+        proto (if (= (:protocol app-url) "http") "ws" "wss")
         port-postfix  (let [port (:port app-url)]
                         (if (< 0 port)
                           (str ":" port)

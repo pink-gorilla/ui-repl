@@ -47,7 +47,7 @@
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
 
-                 'doc cljs.repl/doc
+                 ;'doc cljs.repl/doc   ; this is a macro
                  }
 
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
@@ -60,8 +60,7 @@
                            'get-json pinkgorilla.repl.cljs.http/get-json
                            
                            'application-url pinkgorilla.repl.cljs.http/application-url
-                           'ws-origin pinkgorilla.repl.cljs.http/ws-origin
-                           'api-url pinkgorilla.repl.cljs.http/api-url}
+                           'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
                     'pprint {'print-table cljs.pprint/print-table}
                     't {'now tick.core/now
                         'time tick.core/time}
