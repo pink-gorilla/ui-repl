@@ -7,6 +7,8 @@
                   tick.core
                   thi.ng.strf.core
                   re-frame.core ; so we can use all symbols in bidings rf/
+                  cljs.pprint
+                  cljs.repl
                   ]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
@@ -44,6 +46,8 @@
 
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
+
+                 'doc cljs.repl/doc
                  }
 
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
@@ -53,7 +57,12 @@
                          'reg-event-fx re-frame.core/reg-event-fx}
                     'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
-                           'get-json pinkgorilla.repl.cljs.http/get-json}
+                           'get-json pinkgorilla.repl.cljs.http/get-json
+                           
+                           'application-url pinkgorilla.repl.cljs.http/application-url
+                           'ws-origin pinkgorilla.repl.cljs.http/ws-origin
+                           'api-url pinkgorilla.repl.cljs.http/api-url}
+                    'pprint {'print-table cljs.pprint/print-table}
                     't {'now tick.core/now
                         'time tick.core/time}
                     'f {'format thi.ng.strf.core/format

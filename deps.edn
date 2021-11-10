@@ -8,7 +8,7 @@
   org.pinkgorilla/pinkie {:mvn/version "0.3.11"}
   tick/tick {:mvn/version "0.5.0-RC4"}
   thi.ng/strf {:mvn/version "0.2.2"}
-  
+  com.cemerick/url {:mvn/version "0.1.1"}  ; url links
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
@@ -58,13 +58,13 @@
   :goldly
   {:extra-paths ["target/webly" ; to include the sci-bindings info
                  ]
-   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.70"
+   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.76"
                                         :exclusions  [org.pinkgorilla/ui-repl ; we are in ui-repl!
-                                                      org.pinkgorilla/reval ; todo: remove
-                                                      org.pinkgorilla/ui-code ; todo: remove
+                                                      ;org.pinkgorilla/reval ; todo: remove
+                                                      ;org.pinkgorilla/ui-code ; todo: remove
                                                       ]}
-                org.pinkgorilla/reval {:mvn/version "0.0.21"} ; get a newer version as in goldly.
-                org.pinkgorilla/ui-code {:mvn/version "0.0.28"} ; get a newer version as in goldly.
+                ;org.pinkgorilla/reval {:mvn/version "0.0.21"} ; get a newer version as in goldly.
+                ;org.pinkgorilla/ui-code {:mvn/version "0.0.28"} ; get a newer version as in goldly.
                 }
    :exec-fn goldly.app/goldly-server-run!
    :exec-args {:profile "watch2"
