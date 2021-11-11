@@ -1,6 +1,13 @@
 
+
+
+
 (defn loadjs-page [{:keys [route-params query-params handler] :as route}]
   [:div
+
+   (info "showing loadjs-page")
+   (warn "showing loadjs-page")
+   (error "showing loadjs-page")
 
    [:div.bg-yellow-500
     "load a simple file"]
@@ -20,6 +27,13 @@
 
    [with-js {(browser-defined? "add5") "/r/repl/test1.js"
              load-always "/r/repl/test2.js"}
-    [:p.text-blue-500 "The test1.js and test2.js were loaded (you can see it in the browser console)"]]])
+    [:p.text-blue-500 "The test1.js and test2.js were loaded (you can see it in the browser console)"]]
+
+   [with-js {(browser-defined? "add5") "/r/repl/test2.js"}
+    [component {:start #(js/bongoshow %1 %2)
+                :config "complex bongo ui (added to dom node dynamically :-)"}]]
+
+;
+   ])
 
 (add-page loadjs-page :demo-loadjs)

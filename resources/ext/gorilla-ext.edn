@@ -8,8 +8,7 @@
                   thi.ng.strf.core
                   re-frame.core ; so we can use all symbols in bidings rf/
                   cljs.pprint
-                  cljs.repl
-                  ]
+                  cljs.repl]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
 
@@ -43,6 +42,7 @@
                  'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
                  'load-always pinkgorilla.repl.cljs.jsloader/load-always
                  'load-js pinkgorilla.repl.cljs.jsloader/load-js
+                 'component pinkgorilla.repl.cljs.component/component
 
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
@@ -58,7 +58,7 @@
                     'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json
-                           
+
                            'application-url pinkgorilla.repl.cljs.http/application-url
                            'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
                     'pprint {'print-table cljs.pprint/print-table}

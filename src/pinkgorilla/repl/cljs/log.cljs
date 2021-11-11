@@ -1,14 +1,14 @@
-(ns pinkgorilla.repl.cljs.log)
+(ns pinkgorilla.repl.cljs.log
+  (:require
+   [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]))
 
-(defn log! [l & args]
-   ;(timbre/log! l :p args {:?line 77})
-  (println l args))
+; timbre macros name info gets later replaced by info function.
 
 (defn info [& args]
-  (apply log! :info args))
+  (info args))
 
-(defn warn  [& args]
-  (apply log! :warn args))
+(defn warn [& args]
+  (warn args))
 
-(defn error  [& args]
-  (apply log! :error args))
+(defn error [& args]
+  (error args))

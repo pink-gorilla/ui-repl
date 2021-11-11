@@ -6,7 +6,7 @@
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
   org.pinkgorilla/pinkie {:mvn/version "0.3.11"}
-  tick/tick {:mvn/version "0.5.0-RC4"}
+  tick/tick {:mvn/version "0.5.0-RC5"}
   thi.ng/strf {:mvn/version "0.2.2"}
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
   ; addlib3 branch
@@ -49,7 +49,7 @@
    :main-opts ["-m" "garamond.main"]}
 
   :npm-install
-  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.70"
+  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.76"
                                         :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn goldly.app/goldly-server-run!
    :exec-args {:profile "npm-install"
@@ -71,12 +71,11 @@
                :config {:goldly {:lazy true
                                  :autoload-cljs-dir ["src/demo/page"]
                                  :routes {:app {"" :devtools
-                                                ; devtools
                                                 "devtools/pages" :pages
-                                                "devtools/help" :devtools
                                                 "devtools/scratchpad" :scratchpad
                                                 "devtools/viewer" :viewer
-                                                "devtools/environment" :environment}}}
+                                                "devtools/environment" :environment
+                                                "devtools/theme" :theme}}}
                          :devtools {:rdocument  {:storage-root "../../rdocument/"
                                                  :url-root "/api/rdocument/file/"}
                                     :collections {:demo-cljs [:cljs "demo/notebook/"]}}
