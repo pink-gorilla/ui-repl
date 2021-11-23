@@ -8,14 +8,16 @@
                   thi.ng.strf.core
                   re-frame.core ; so we can use all symbols in bidings rf/
                   cljs.pprint
-                  cljs.repl]
+                  cljs.repl
+                  frontend.page
+                  ]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
 
                  ; webly
                  'nav pinkgorilla.repl.cljs.webly/nav
                  'current-route pinkgorilla.repl.cljs.webly/current-route
-                 'reagent-page webly.web.handler/reagent-page
+                 'reagent-page frontend.page/reagent-page
                  'notify pinkgorilla.repl.cljs.webly/notify
                  'dialog pinkgorilla.repl.cljs.webly/dialog
 
