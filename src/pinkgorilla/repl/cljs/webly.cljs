@@ -2,9 +2,8 @@
   (:require
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [re-frame.core :as rf]
-   [webly.web.routes :as wr]
-   [webly.web.handler] ; side-effects
-   [webly.user.notifications.core :refer [add-notification]]))
+   [frontend.routes :as wr]
+   [frontend.notifications.core :refer [add-notification]]))
 
 ; this is a clojurescript namespace
 ; functions that should be available to all goldly systems

@@ -58,7 +58,8 @@
   :goldly
   {:extra-paths ["target/webly" ; to include the sci-bindings info
                  ]
-   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.76"
+   :extra-deps {org.pinkgorilla/webly {:mvn/version "0.4.555"}
+                org.pinkgorilla/goldly {:mvn/version "0.3.76"
                                         :exclusions  [org.pinkgorilla/ui-repl ; we are in ui-repl!
                                                       ;org.pinkgorilla/reval ; todo: remove
                                                       ;org.pinkgorilla/ui-code ; todo: remove
