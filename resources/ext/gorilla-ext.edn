@@ -10,6 +10,7 @@
                   cljs.pprint
                   cljs.repl
                   frontend.page
+                  frontend.settings.local-storage
                   ]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
@@ -60,9 +61,11 @@
                     'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json
-
                            'application-url pinkgorilla.repl.cljs.http/application-url
                            'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
+                    'localstorage {'ls-get frontend.settings.local-storage/ls-get
+                                   'ls-set! frontend.settings.local-storage/ls-set!
+                                   'ls-remove! frontend.settings.local-storage/ls-remove!}      
                     'pprint {'print-table cljs.pprint/print-table}
                     't {'now tick.core/now
                         'time tick.core/time}
@@ -71,4 +74,3 @@
  :pinkie {}
  ; runtime
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
-
