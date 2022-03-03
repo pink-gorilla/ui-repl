@@ -49,7 +49,7 @@
    :main-opts ["-m" "garamond.main"]}
 
   :npm-install
-  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.3.76"
+  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.488"
                                         :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn goldly.app/goldly-server-run!
    :exec-args {:profile "npm-install"
@@ -58,25 +58,21 @@
   :goldly
   {:extra-paths ["target/webly" ; to include the sci-bindings info
                  ]
-   :extra-deps {org.pinkgorilla/webly {:mvn/version "0.4.555"}
-                org.pinkgorilla/goldly {:mvn/version "0.3.76"
+   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.488"
                                         :exclusions  [org.pinkgorilla/ui-repl ; we are in ui-repl!
-                                                      ;org.pinkgorilla/reval ; todo: remove
-                                                      ;org.pinkgorilla/ui-code ; todo: remove
-                                                      ]}
-                ;org.pinkgorilla/reval {:mvn/version "0.0.21"} ; get a newer version as in goldly.
-                ;org.pinkgorilla/ui-code {:mvn/version "0.0.28"} ; get a newer version as in goldly.
-                }
+                                                      ]}}
    :exec-fn goldly.app/goldly-server-run!
    :exec-args {:profile "watch2"
                :config {:goldly {:lazy true
-                                 :autoload-cljs-dir ["src/demo/page"]
-                                 :routes {:app {"" :devtools
-                                                "devtools/pages" :pages
-                                                "devtools/scratchpad" :scratchpad
-                                                "devtools/viewer" :viewer
-                                                "devtools/environment" :environment
-                                                "devtools/theme" :theme}}}
+                                 :autoload-clj-ns []
+                                 :autoload-cljs-dir [;"demo/lib"
+                                                     "demo/page"]
+                                 :routes {:app {"" :demo-dialog
+                                                "http-demo" :demo-http-get
+                                                "appdb" :demo-appdb
+                                                "loadjs" :demo-loadjs
+
+                                                }}}
                          :devtools {:rdocument  {:storage-root "../../rdocument/"
                                                  :url-root "/api/rdocument/file/"}
                                     :collections {:demo-cljs [:cljs "demo/notebook/"]}}

@@ -19,8 +19,8 @@
     (rf/dispatch [:modal/open f :small])
     (rf/dispatch [:modal/open f])))
 
-(defn notify [s]
-  (add-notification s))
+(defn notify [& args]
+  (apply add-notification args))
 
 
 
