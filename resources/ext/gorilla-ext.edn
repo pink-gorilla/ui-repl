@@ -75,7 +75,7 @@
                         'time tick.core/time}
                     ;'f {'format thi.ng.strf.core/format
                     ;    'float thi.ng.strf.core/float}
-                    ;    }
+                   }
  :pinkie {}
  ; runtime
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
