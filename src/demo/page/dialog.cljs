@@ -51,7 +51,10 @@
                 :on-click #(nav :demo-appdb)}]
    [:input.m-2 {:type "button"
                 :value "goto load-js"
-                :on-click #(nav :demo-loadjs)}]])
+                :on-click #(nav :demo-loadjs)}]
+   [:input.m-2 {:type "button"
+                :value "goto format"
+                :on-click #(nav :demo-format)}]])
 
 (add-page dialog-page :demo-dialog)
 

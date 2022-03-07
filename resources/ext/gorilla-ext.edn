@@ -11,6 +11,7 @@
                   cljs.repl
                   frontend.page
                   frontend.settings.local-storage
+                  pinkgorilla.repl.cljs.format
                   ]
  :cljs-bindings {;reframe (reframe fns - see ns rf below)
                  'app-db pinkgorilla.repl.cljs.reframe/app-db
@@ -34,8 +35,11 @@
                  'get-json pinkgorilla.repl.cljs.http/get-json ; depreciated (in http ns) - see below
 
                  ;
-                 'format goog.string/format
+                 'format pinkgorilla.repl.cljs.format/format
+                 'dt-format pinkgorilla.repl.cljs.format/dt-format
+                 'to-fixed pinkgorilla.repl.cljs.format/to-fixed
                  'parse-float pinkgorilla.repl.cljs.js/parse-float
+
                  'timeout pinkgorilla.repl.cljs.js/timeout
                  'interval pinkgorilla.repl.cljs.js/interval
                  'alert pinkgorilla.repl.cljs.js/alert
@@ -70,7 +74,8 @@
                     't {'now tick.core/now
                         'time tick.core/time}
                     'f {'format thi.ng.strf.core/format
-                        'float thi.ng.strf.core/float}}
+                        'float thi.ng.strf.core/float}
+                        }
  :pinkie {}
  ; runtime
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
