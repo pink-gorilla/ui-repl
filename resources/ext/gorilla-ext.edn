@@ -5,7 +5,7 @@
          :current {}}
  :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
                   tick.core
-                  thi.ng.strf.core
+                  ;thi.ng.strf.core
                   re-frame.core ; so we can use all symbols in bidings rf/
                   cljs.pprint
                   cljs.repl
@@ -73,9 +73,9 @@
                     'pprint {'print-table cljs.pprint/print-table}
                     't {'now tick.core/now
                         'time tick.core/time}
-                    'f {'format thi.ng.strf.core/format
-                        'float thi.ng.strf.core/float}
-                        }
+                    ;'f {'format thi.ng.strf.core/format
+                    ;    'float thi.ng.strf.core/float}
+                    ;    }
  :pinkie {}
  ; runtime
  :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
