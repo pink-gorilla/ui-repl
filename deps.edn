@@ -7,7 +7,7 @@
   cljs-http/cljs-http {:mvn/version "0.1.46"}
   org.pinkgorilla/pinkie {:mvn/version "0.3.11"}
   tick/tick {:mvn/version "0.5.0-RC5"}
-  thi.ng/strf {:mvn/version "0.2.2"}
+  ;thi.ng/strf {:mvn/version "0.2.2"}
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
