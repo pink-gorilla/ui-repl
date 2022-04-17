@@ -54,6 +54,7 @@
                  ; math
                  'sin pinkgorilla.repl.cljs.js/sin ; test bindings
 
+                 'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
                  ;'doc cljs.repl/doc   ; this is a macro
                  }
 
