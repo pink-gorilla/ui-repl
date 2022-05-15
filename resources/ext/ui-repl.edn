@@ -1,8 +1,6 @@
 {:name "ui-repl"
  ; compile-time
  :lazy false ; util fns not yet working with lazy loader
- :theme {:available {}
-         :current {}}
  :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
                   tick.core
                   ;thi.ng.strf.core
@@ -57,7 +55,6 @@
                  'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
                  ;'doc cljs.repl/doc   ; this is a macro
                  }
-
  :cljs-ns-bindings {'r {'atom reagent.core/atom}
                     'rf {'dispatch re-frame.core/dispatch
                          'subscribe re-frame.core/subscribe
@@ -77,6 +74,7 @@
                     ;'f {'format thi.ng.strf.core/format
                     ;    'float thi.ng.strf.core/float}
                    }
- :pinkie {}
  ; runtime
- :clj-require [[clojure.pprint :as pprint :refer [print-table]]]}
+ ;:clj-require [[clojure.pprint :as pprint :refer [print-table]]]
+ 
+ }
