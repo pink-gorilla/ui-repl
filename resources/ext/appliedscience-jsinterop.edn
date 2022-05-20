@@ -1,6 +1,7 @@
 {:name "applied-science.js-interop"
  ; build
  :lazy false
+ :lazy-sci true
  :cljs-namespace [applied-science.js-interop
                   pinkgorilla.repl.cljs.js-interop]
  :cljs-ns-bindings {'j {'get applied-science.js-interop/get
