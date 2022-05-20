@@ -1,5 +1,5 @@
 {:paths ["src"
-         "resources" ; snippets
+         "resources" ; extension
          ]
  :deps
  {org.clojure/clojure    {:mvn/version "1.10.3"}
@@ -9,6 +9,8 @@
   tick/tick {:mvn/version "0.5.0-RC5"}
   ;thi.ng/strf {:mvn/version "0.2.2"}
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
+
+  applied-science/js-interop  {:mvn/version "0.3.3"}
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
