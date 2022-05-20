@@ -1,5 +1,8 @@
-
-
+(ns demo.notebook.load-js
+  (:require
+   [http]
+   [pprint]
+   [user :refer [load-js]]))
 
 ; demonstrates loading a js file.
 

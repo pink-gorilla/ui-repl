@@ -1,6 +1,5 @@
 (ns pinkgorilla.repl.cljs.format
   (:require
-   [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [goog.string :as gstring]
    [goog.string.format]
    [goog.i18n.NumberFormat.Format]

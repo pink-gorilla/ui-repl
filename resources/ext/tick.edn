@@ -1,0 +1,6 @@
+{:name "tick"
+ ; build
+ :lazy false
+ :cljs-namespace [tick.core]
+ :cljs-ns-bindings {'t {'now tick.core/now
+                        'time tick.core/time}}}

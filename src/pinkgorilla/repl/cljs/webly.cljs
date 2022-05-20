@@ -1,6 +1,5 @@
 (ns pinkgorilla.repl.cljs.webly
   (:require
-   [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [re-frame.core :as rf]
    [frontend.routes :as wr]
    [frontend.notifications.core :refer [add-notification]]))

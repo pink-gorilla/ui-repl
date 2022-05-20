@@ -1,0 +1,8 @@
+{:name "reframe"
+ ; build
+ :lazy false
+ :cljs-namespace [re-frame.core]
+ :cljs-ns-bindings {'rf {'dispatch re-frame.core/dispatch
+                         'subscribe re-frame.core/subscribe
+                         'reg-event-db re-frame.core/reg-event-db
+                         'reg-event-fx re-frame.core/reg-event-fx}}}

@@ -1,0 +1,14 @@
+{:name "webly2"
+ ; build
+ :lazy false
+ :cljs-namespace [frontend.page
+                  frontend.settings.local-storage
+                  pinkgorilla.repl.cljs.webly]
+ :cljs-bindings {'nav pinkgorilla.repl.cljs.webly/nav
+                 'current-route pinkgorilla.repl.cljs.webly/current-route
+                 'reagent-page frontend.page/reagent-page
+                 'notify pinkgorilla.repl.cljs.webly/notify
+                 'dialog pinkgorilla.repl.cljs.webly/dialog}
+ :cljs-ns-bindings {'localstorage {'ls-get frontend.settings.local-storage/ls-get
+                                   'ls-set! frontend.settings.local-storage/ls-set!
+                                   'ls-remove! frontend.settings.local-storage/ls-remove!}}}

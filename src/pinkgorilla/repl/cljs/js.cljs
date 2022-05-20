@@ -1,7 +1,5 @@
 (ns pinkgorilla.repl.cljs.js
   (:require
-   [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
-   [re-frame.core :as rf]
    [goog.string :as gstring]
    [goog.string.format]
    [goog.object]))
@@ -30,9 +28,6 @@
 
 (defn evt-val [e]
   (.. e -target -value))
-
-(defn sin [x]
-  (.sin js/Math x))
 
 ;; js object -> cljs map
 ;; https://stackoverflow.com/questions/32467299/clojurescript-convert-arbitrary-javascript-object-to-clojure-script-map

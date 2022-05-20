@@ -1,0 +1,5 @@
+{:name "reagent"
+ ; build
+ :lazy false
+ :cljs-namespace [reagent.core]
+ :cljs-ns-bindings {'r {'atom reagent.core/atom}}}

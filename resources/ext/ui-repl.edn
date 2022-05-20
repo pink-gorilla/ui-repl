@@ -1,27 +1,14 @@
 {:name "ui-repl"
- ; compile-time
+ ; build
  :lazy false ; util fns not yet working with lazy loader
- :cljs-namespace [pinkgorilla.repl.cljs.core ; this refers the other namespaces
-                  tick.core
+ :cljs-namespace [pinkgorilla.repl.cljs.js
+                  pinkgorilla.repl.cljs.log
+                  pinkgorilla.repl.cljs.http
+                  pinkgorilla.repl.cljs.jsloader
+                  pinkgorilla.repl.cljs.component
                   ;thi.ng.strf.core
-                  re-frame.core ; so we can use all symbols in bidings rf/
-                  cljs.pprint
-                  cljs.repl
-                  frontend.page
-                  frontend.settings.local-storage
-                  pinkgorilla.repl.cljs.format
-                  ]
- :cljs-bindings {;reframe (reframe fns - see ns rf below)
-                 'app-db pinkgorilla.repl.cljs.reframe/app-db
-
-                 ; webly
-                 'nav pinkgorilla.repl.cljs.webly/nav
-                 'current-route pinkgorilla.repl.cljs.webly/current-route
-                 'reagent-page frontend.page/reagent-page
-                 'notify pinkgorilla.repl.cljs.webly/notify
-                 'dialog pinkgorilla.repl.cljs.webly/dialog
-
-                 ; logging
+                  cljs.repl]
+ :cljs-bindings {; logging
                  'println println
                  'info pinkgorilla.repl.cljs.log/info
                  'warn pinkgorilla.repl.cljs.log/warn
@@ -31,13 +18,7 @@
                  'get-str pinkgorilla.repl.cljs.http/get-str  ; depreciated (in http ns) - see below
                  'get-edn pinkgorilla.repl.cljs.http/get-edn ; depreciated (in http ns) - see below
                  'get-json pinkgorilla.repl.cljs.http/get-json ; depreciated (in http ns) - see below
-
-                 ;
-                 'format pinkgorilla.repl.cljs.format/format
-                 'dt-format pinkgorilla.repl.cljs.format/dt-format
-                 'to-fixed pinkgorilla.repl.cljs.format/to-fixed
-                 'parse-float pinkgorilla.repl.cljs.js/parse-float
-
+ 
                  'timeout pinkgorilla.repl.cljs.js/timeout
                  'interval pinkgorilla.repl.cljs.js/interval
                  'alert pinkgorilla.repl.cljs.js/alert
@@ -49,32 +30,14 @@
                  'load-js pinkgorilla.repl.cljs.jsloader/load-js
                  'component pinkgorilla.repl.cljs.component/component
 
-                 ; math
-                 'sin pinkgorilla.repl.cljs.js/sin ; test bindings
-
                  'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
                  ;'doc cljs.repl/doc   ; this is a macro
                  }
- :cljs-ns-bindings {'r {'atom reagent.core/atom}
-                    'rf {'dispatch re-frame.core/dispatch
-                         'subscribe re-frame.core/subscribe
-                         'reg-event-db re-frame.core/reg-event-db
-                         'reg-event-fx re-frame.core/reg-event-fx}
-                    'http {'get-str pinkgorilla.repl.cljs.http/get-str
+ :cljs-ns-bindings {'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json
                            'application-url pinkgorilla.repl.cljs.http/application-url
                            'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
-                    'localstorage {'ls-get frontend.settings.local-storage/ls-get
-                                   'ls-set! frontend.settings.local-storage/ls-set!
-                                   'ls-remove! frontend.settings.local-storage/ls-remove!}      
-                    'pprint {'print-table cljs.pprint/print-table}
-                    't {'now tick.core/now
-                        'time tick.core/time}
                     ;'f {'format thi.ng.strf.core/format
                     ;    'float thi.ng.strf.core/float}
-                   }
- ; runtime
- ;:clj-require [[clojure.pprint :as pprint :refer [print-table]]]
- 
- }
+                    }}
