@@ -47,14 +47,18 @@
                 :value "goto http demo"
                 :on-click #(nav :demo-http-get)}]
    [:input.m-2 {:type "button"
-                :value "goto appdb"
-                :on-click #(nav :demo-appdb)}]
-   [:input.m-2 {:type "button"
                 :value "goto load-js"
                 :on-click #(nav :demo-loadjs)}]
    [:input.m-2 {:type "button"
                 :value "goto format"
-                :on-click #(nav :demo-format)}]])
+                :on-click #(nav :demo-format)}]
+   
+   [:input.m-2 {:type "button"
+                :value "goto goldly devtools"
+                :on-click #(nav :devtools)}]
+   
+   
+   ])
 
 (add-page dialog-page :demo-dialog)
 

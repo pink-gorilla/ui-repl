@@ -30,9 +30,6 @@
 ;      (.format formatter date tz)
 ;      (.format formatter date))))
 
-
-
-
 ; https://github.com/thi-ng/strf/
 
 

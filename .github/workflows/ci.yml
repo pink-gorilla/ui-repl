@@ -40,7 +40,7 @@ jobs:
     #  run: clojure -M:garamond
     - name: npm-install
       run: |
-        clojure -X:goldly-build
+        clojure -X:goldly:build
     #    ./scripts/copy_res.sh
     #- name: clj-kondo
     #  run: clojure -M:lint

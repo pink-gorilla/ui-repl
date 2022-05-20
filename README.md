@@ -8,11 +8,20 @@ test and fine tune the functions.
 
 ## End-Users
 - this project is NOT for you! Instead go to:
-- [notebook](https://github.com/pink-gorilla/notebook)
+- [goldly](https://github.com/pink-gorilla/goldly)
 
 ## Demo
 
+The demo is just for developers to see that all the functions in this module work as intended.
+
 ```
+clj -X:goldly
+```
+
+To compile js and run:
+```
+clj -X:goldly:build :profile "npm-install"
+clj -X:goldly:build :profile "compile2"
 clj -X:goldly
 ```
 

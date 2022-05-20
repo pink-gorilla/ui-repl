@@ -1,7 +1,5 @@
 (ns pinkgorilla.repl.cljs.js
   (:require
-   [goog.string :as gstring]
-   [goog.string.format]
    [goog.object]))
 
 ; this is a clojurescript namespace

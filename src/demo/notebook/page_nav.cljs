@@ -7,6 +7,8 @@
 
 (nav :devtools)
 
-(rf/dispatch [:bidi/goto :goldly/about])
+(rf/dispatch [:bidi/goto :devtools])
 
 (current-route)
+
+

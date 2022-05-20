@@ -1,8 +1,7 @@
 (ns demo.notebook.format
   (:require
    [t]
-   [user :refer [format]]
-   [cljs.pprint :refer [print-table]]))
+   [user :refer [format]]))
 
 (format "hello %s !" "mr X.")
 
@@ -16,6 +15,3 @@
 (format "%d" 134.44)
 (format "%s %s %s" 2021 11 13)
 
-
-(print-table {:name "Harry" :age "?"
-              :name "Dumbeldor" :age "old"})
