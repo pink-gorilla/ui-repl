@@ -4,12 +4,11 @@
  :cljs-namespace [pinkgorilla.repl.cljs.js
                   pinkgorilla.repl.cljs.log
                   pinkgorilla.repl.cljs.http
-                  pinkgorilla.repl.cljs.jsloader
                   pinkgorilla.repl.cljs.component
                   ;thi.ng.strf.core
                   cljs.repl]
  :cljs-bindings {; logging
-                 'println println
+                 ;'println println
                  'info pinkgorilla.repl.cljs.log/info
                  'warn pinkgorilla.repl.cljs.log/warn
                  'error pinkgorilla.repl.cljs.log/error
@@ -18,17 +17,11 @@
                  'get-str pinkgorilla.repl.cljs.http/get-str  ; depreciated (in http ns) - see below
                  'get-edn pinkgorilla.repl.cljs.http/get-edn ; depreciated (in http ns) - see below
                  'get-json pinkgorilla.repl.cljs.http/get-json ; depreciated (in http ns) - see below
- 
+
                  'timeout pinkgorilla.repl.cljs.js/timeout
                  'interval pinkgorilla.repl.cljs.js/interval
                  'alert pinkgorilla.repl.cljs.js/alert
                  'evt-val pinkgorilla.repl.cljs.js/evt-val
-
-                 'with-js pinkgorilla.repl.cljs.jsloader/with-js
-                 'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
-                 'load-always pinkgorilla.repl.cljs.jsloader/load-always
-                 'load-js pinkgorilla.repl.cljs.jsloader/load-js
-                 'component pinkgorilla.repl.cljs.component/component
 
                  'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
                  ;'doc cljs.repl/doc   ; this is a macro
