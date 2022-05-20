@@ -1,0 +1,7 @@
+{:name "cljs-pprint"
+ ; build
+ :lazy false
+ ;:lazy-sci true ; frisk requires cljs-pprint, so until we have a extension hierarchy, this does not work.
+ :cljs-namespace [pinkgorilla.repl.cljs.pprint]
+ :cljs-ns-bindings {'cljs.pprint {'pprint pinkgorilla.repl.cljs.pprint/pprint
+                                  'print-table pinkgorilla.repl.cljs.pprint/print-table}}}

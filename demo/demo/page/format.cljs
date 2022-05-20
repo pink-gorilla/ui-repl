@@ -4,9 +4,9 @@
 (defn format-nr [n f]
   [:p "format string: " [:span.text-blue-300 f] " result: " (format f n)])
 
-(defn fmt-yyyymmdd [dt]
-  (when dt
-    (dt-format "YYYYMMdd" dt)))
+;(defn fmt-yyyymmdd [dt]
+;  (when dt
+;    (dt-format "YYYYMMdd" dt)))
 
 (defn format-page [{:keys [route-params query-params handler] :as route}]
   [:div
@@ -23,7 +23,8 @@
    [format-nr 1 "%d"]
    [:p "date (format with 3 numbers): " (format "%s %s %s" 2021 11 13)]
 
-   [:h1 "dt-format"]
-   [:p "date (instant) format: " (dt-format "YYYYMMdd HH:mm:ss" (t/now))]])
+   ;[:h1 "dt-format"]
+   ;[:p "date (instant) format: " (dt-format "YYYYMMdd HH:mm:ss" (t/now))]
+   ])
 
 (add-page format-page :demo-format)

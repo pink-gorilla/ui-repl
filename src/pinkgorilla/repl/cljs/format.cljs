@@ -3,10 +3,7 @@
    [goog.string :as gstring]
    [goog.string.format]
    [goog.i18n.NumberFormat.Format]
-   [goog.i18n.DateTimeFormat :as dtf]
-   [tick.core :as t]
-   [tick.locale-en-us] ; a locale is needed for date formatting
-   )
+   [goog.i18n.DateTimeFormat :as dtf])
   (:import
    (goog.i18n NumberFormat)
    (goog.i18n.NumberFormat Format)))
@@ -33,13 +30,8 @@
 ;      (.format formatter date tz)
 ;      (.format formatter date))))
 
-; (:require [cljs.pprint :as pprint]))
-; (pprint/cl-format nil  "~,2f" 1.2345) ; => returns "1.23"
-; (pprint/cl-format true "~,2f" 1.2345) ; => prints "1.23", returns nil
 
-(defn dt-format [fmt dt]
-  (let [dtz (t/zoned-date-time dt)]
-    (t/format (t/formatter fmt) dtz)))
+
 
 ; https://github.com/thi-ng/strf/
 

@@ -1,6 +1,10 @@
 {:name "tick"
  ; build
  :lazy false
- :cljs-namespace [tick.core]
+ :lazy-sci true
+ :cljs-namespace [tick.core
+                  pinkgorilla.repl.cljs.tick]
  :cljs-ns-bindings {'t {'now tick.core/now
-                        'time tick.core/time}}}
+                        'time tick.core/time
+                        'dt-format pinkgorilla.repl.cljs.tick/dt-format
+                        }}}
