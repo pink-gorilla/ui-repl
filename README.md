@@ -29,6 +29,3 @@ clj -X:goldly
 
 `clj -M:test-addlib`
 
-
-
-
