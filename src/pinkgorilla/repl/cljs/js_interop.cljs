@@ -1,6 +1,7 @@
 (ns pinkgorilla.repl.cljs.js-interop
   (:require
    [applied-science.js-interop :as j]
+   [goog]
    [goog.object :as g]))
 
 (defn value-of
