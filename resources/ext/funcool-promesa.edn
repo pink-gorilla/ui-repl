@@ -1,0 +1,11 @@
+{:name "funcool-promesa"
+ ; build
+ :lazy false
+ :lazy-sci false
+ :cljs-namespace [sci.configs.funcool.promesa]
+ :cljs-ns-bindings {'promesa.core sci.configs.funcool.promesa/promesa-namespace
+                    'promesa.protocols sci.configs.funcool.promesa/promesa-protocols-namespace
+                    }}
+
+
+

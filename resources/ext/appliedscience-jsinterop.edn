@@ -1,13 +1,17 @@
 {:name "applied-science.js-interop"
  ; build
  :lazy false
- :lazy-sci true
+ :lazy-sci false ; lazy not yet working.
  :cljs-namespace [applied-science.js-interop
-                  pinkgorilla.repl.cljs.js-interop]
- :cljs-ns-bindings {'j {'get applied-science.js-interop/get
-                        'call applied-science.js-interop/call
-                        'get-in applied-science.js-interop/get-in
-                        'call-in applied-science.js-interop/call-in
-                        'obj applied-science.js-interop/obj}
-                    'jg {'obj->clj pinkgorilla.repl.cljs.js-interop/obj->clj
-                         'value-of pinkgorilla.repl.cljs.js-interop/value-of}}}
+                  pinkgorilla.repl.cljs.js-interop
+                  sci.configs.applied-science.js-interop]
+ :cljs-ns-bindings {;'j {'get applied-science.js-interop/get ; depreciated
+                    ;    'call applied-science.js-interop/call
+                    ;    'get-in applied-science.js-interop/get-in
+                    ;    'call-in applied-science.js-interop/call-in
+                    ;    'obj applied-science.js-interop/obj}
+                    'jg {'obj->clj pinkgorilla.repl.cljs.js-interop/obj->clj ; this is ok.
+                         'value-of pinkgorilla.repl.cljs.js-interop/value-of}
+                    'applied-science.js-interop sci.configs.applied-science.js-interop/js-interop-namespace
+                    
+                    }}
