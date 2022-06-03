@@ -2,13 +2,8 @@
  ; build
  :lazy false
  :cljs-namespace [pinkgorilla.repl.cljs.jsloader]
- :cljs-bindings {'with-js pinkgorilla.repl.cljs.jsloader/with-js ; depreciated. use js-loader
-                 'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
-                 'load-always pinkgorilla.repl.cljs.jsloader/load-always
-                 'load-js pinkgorilla.repl.cljs.jsloader/load-js
-                 'component pinkgorilla.repl.cljs.component/component}
  :cljs-ns-bindings {'js-loader {'with-js pinkgorilla.repl.cljs.jsloader/with-js
-                                 'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
-                                 'load-always pinkgorilla.repl.cljs.jsloader/load-always
-                                 'load-js pinkgorilla.repl.cljs.jsloader/load-js
-                                 'component pinkgorilla.repl.cljs.component/component}}}
+                                'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
+                                'load-always pinkgorilla.repl.cljs.jsloader/load-always
+                                'load-js pinkgorilla.repl.cljs.jsloader/load-js
+                                'component pinkgorilla.repl.cljs.component/component}}}

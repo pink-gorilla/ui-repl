@@ -1,6 +1,6 @@
 (ns demo.notebook.dialog
   (:require
-   [user :refer [dialog]]))
+   [ui.webly :refer [dialog]]))
 
 (str *ns*)
 

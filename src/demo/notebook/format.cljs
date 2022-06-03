@@ -1,7 +1,11 @@
 (ns demo.notebook.format
   (:require
    [t]
-   [user :refer [format]]))
+   [tick.goldly :refer [dt-format]]
+   [goldly.js :refer [to-fixed]]
+   [goog.string :refer [format]]))
+
+(dt-format "YYYYMMdd HH:mm:ss" (t/now))
 
 (format "hello %s !" "mr X.")
 

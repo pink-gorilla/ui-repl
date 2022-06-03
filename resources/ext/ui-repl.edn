@@ -6,31 +6,23 @@
                   pinkgorilla.repl.cljs.http
                   pinkgorilla.repl.cljs.component
                   ;thi.ng.strf.core
-                  cljs.repl]
- :cljs-bindings {; logging
-                 ;'println println
-                 'info pinkgorilla.repl.cljs.log/info
-                 'warn pinkgorilla.repl.cljs.log/warn
-                 'error pinkgorilla.repl.cljs.log/error
-
-                 ; http
-                 'get-str pinkgorilla.repl.cljs.http/get-str  ; depreciated (in http ns) - see below
-                 'get-edn pinkgorilla.repl.cljs.http/get-edn ; depreciated (in http ns) - see below
-                 'get-json pinkgorilla.repl.cljs.http/get-json ; depreciated (in http ns) - see below
-
-                 'timeout pinkgorilla.repl.cljs.js/timeout
-                 'interval pinkgorilla.repl.cljs.js/interval
-                 'alert pinkgorilla.repl.cljs.js/alert
-                 'evt-val pinkgorilla.repl.cljs.js/evt-val
-
-                 'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
-                 ;'doc cljs.repl/doc   ; this is a macro
-                 }
+                  ]
  :cljs-ns-bindings {'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json
                            'application-url pinkgorilla.repl.cljs.http/application-url
                            'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
+
+                    'goldly.js {'timeout pinkgorilla.repl.cljs.js/timeout
+                                'interval pinkgorilla.repl.cljs.js/interval
+                                'alert pinkgorilla.repl.cljs.js/alert
+                                'evt-val pinkgorilla.repl.cljs.js/evt-val
+                                'parse-float pinkgorilla.repl.cljs.js/parse-float
+                                'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
+                                'to-fixed pinkgorilla.repl.cljs.js/to-fixed}
+                    'goldly.log {'info pinkgorilla.repl.cljs.log/info
+                                 'warn pinkgorilla.repl.cljs.log/warn
+                                 'error pinkgorilla.repl.cljs.log/error}
                     ;'f {'format thi.ng.strf.core/format
                     ;    'float thi.ng.strf.core/float}
                     }}

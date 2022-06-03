@@ -1,5 +1,6 @@
 (ns demo.notebook.tick
   (:require
-   [t]))
+   [tick.core :as t]
+   [tick.goldly :refer [dt-format]]))
 
-(t/dt-format "YYYYMMdd HH:mm:ss" (t/now))
+(dt-format "YYYYMMdd HH:mm:ss" (t/now))

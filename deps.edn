@@ -8,7 +8,6 @@
   tick/tick {:mvn/version "0.5.0-RC5"}
   ;thi.ng/strf {:mvn/version "0.2.2"}
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
-
   applied-science/js-interop  {:mvn/version "0.3.3"}
   funcool/promesa {:mvn/version "8.0.450"}
   org.babashka/sci.configs {:git/url "https://github.com/babashka/sci.configs.git"
@@ -56,13 +55,12 @@
   {:extra-paths ["target/webly" ; to include the sci-bindings info
                  "node_modules"
                  "demo"]
-   :extra-deps {org.pinkgorilla/goldly-docs {:mvn/version "0.4.545"
-                                             :exclusions  [org.pinkgorilla/ui-repl]}}
+   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.553"
+                                        :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn modular.system/start!
    :exec-args {:profile "jetty"
                :services "goldly/services.edn"
                :config  ["webly/config.edn" "goldly/config.edn" "goldly/docs-config.edn" "repl-config.edn"]}}
-
 
   :build
   {:exec-fn goldly.app.build/goldly-build

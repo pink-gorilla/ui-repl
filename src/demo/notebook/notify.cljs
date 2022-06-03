@@ -1,6 +1,6 @@
 (ns demo.notebook.notify
   (:require
-   [user :refer [notify]]))
+   [webly.ui :refer [notify]]))
 
 (notify :info [:span.bg-blue-300.inline "the sky is blue!"] 1000)
 

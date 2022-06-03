@@ -1,5 +1,5 @@
 {:goldly {:lazy true
-          :autoload-cljs-dir ["demo/page"]
+          :autoload-cljs-dir ["demo/page5"]
           :routes {:app {"" :demo-dialog
                          "format" :demo-format
                          "http-demo" :demo-http-get

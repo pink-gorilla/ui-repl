@@ -1,3 +1,10 @@
+(ns demo.page5.dialog
+  (:require
+   [goldly.page :as page]
+   [goldly.nav :refer [nav]]
+   [goldly.js :refer [alert]]
+   [ui.webly :refer [dialog notify]]))
+
 (defn my-dialog []
   [:div
    {:style {:background-color "white"
@@ -5,7 +12,7 @@
             :border-radius    "6px"
             :text-align "center"}} "Hello modal!"])
 
-(defn dialog-page [{:keys [route-params query-params handler] :as route}]
+(defn dialog-page [{:keys [_route-params _query-params _handler] :as _route}]
   [:div
 
   ; alert   
@@ -60,7 +67,7 @@
    
    ])
 
-(add-page dialog-page :demo-dialog)
+(page/add dialog-page :demo-dialog)
 
 
 

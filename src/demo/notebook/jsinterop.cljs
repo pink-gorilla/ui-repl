@@ -1,6 +1,6 @@
 (ns demo.notebook.jsinterop
   (:require
-   [j]))
+   [applied-science.js-interop :as j]))
 
 #js [1 2 3]
 

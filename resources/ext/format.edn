@@ -1,7 +1,0 @@
-{:name "format"
- ; build
- :lazy false
- :cljs-namespace [pinkgorilla.repl.cljs.format]
- :cljs-bindings {'format pinkgorilla.repl.cljs.format/format
-                 'to-fixed pinkgorilla.repl.cljs.format/to-fixed
-                 'parse-float pinkgorilla.repl.cljs.js/parse-float}}

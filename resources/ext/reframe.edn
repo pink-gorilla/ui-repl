@@ -2,11 +2,7 @@
  ; build
  :lazy false
  :cljs-namespace [re-frame.core]
- :cljs-ns-bindings {'rf {'dispatch re-frame.core/dispatch ; rf is depreciated. move to re-rame.core
-                         'subscribe re-frame.core/subscribe
-                         'reg-event-db re-frame.core/reg-event-db
-                         'reg-event-fx re-frame.core/reg-event-fx}
-                    're-frame.core {'dispatch re-frame.core/dispatch
+ :cljs-ns-bindings {'re-frame.core {'dispatch re-frame.core/dispatch
                                     'subscribe re-frame.core/subscribe
                                     'reg-event-db re-frame.core/reg-event-db
                                     'reg-event-fx re-frame.core/reg-event-fx}}}

@@ -4,6 +4,10 @@
 
 ; this is a clojurescript namespace
 ; functions that should be available to all goldly systems
+
+(defn to-fixed [nr digits]
+  (.toFixed nr digits))
+
 (defn timeout [f ms]
   (js/setTimeout f ms))
 

@@ -1,7 +1,7 @@
 (ns demo.notebook.page-nav
   (:require
-   [rf]
-   [user :refer [nav current-route]]))
+   [re-frame.core :as rf]
+   [goldly.nav :refer [nav current-route]]))
 
 (nav :demo-format)
 

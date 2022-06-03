@@ -8,9 +8,6 @@
    (goog.i18n NumberFormat)
    (goog.i18n.NumberFormat Format)))
 
-(defn to-fixed [nr digits]
-  (.toFixed nr digits))
-
 (defn format
   "Formats a string using goog.string.format.
    e.g: (format \"Cost: %.2f\" 10.0234)"
