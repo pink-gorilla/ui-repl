@@ -1,0 +1,6 @@
+{:name "goog.object"
+ ; build
+ :lazy false
+ :cljs-namespace [goog.object]
+ :cljs-ns-bindings {'goog.object {'set gobject/set
+                                  'get gobject/get}}}
