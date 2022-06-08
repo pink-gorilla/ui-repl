@@ -1,6 +1,6 @@
 (ns demo.notebook.format
   (:require
-   [t]
+   [tick.core :as t]
    [tick.goldly :refer [dt-format]]
    [goldly.js :refer [to-fixed]]
    [goog.string :refer [format]]))

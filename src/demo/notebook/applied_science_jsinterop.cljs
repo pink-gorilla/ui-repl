@@ -1,15 +1,15 @@
 (ns demo.notebook.applied-science-jsinterop
   (:require
-   [applied-science.js-interop]))
+   [applied-science.js-interop :as j]))
 
-(def o #js {"a" 44})
+(def o #js {"a" 44 "b" "B"})
 
 ;; Read
-(applied-science.js-interop/get o :x)
-(applied-science.js-interop/get o "a")
+(j/get o :x)
+(j/get o "a")
 
-(applied-science.js-interop/get-in o [:a])
-(applied-science.js-interop/select-keys o [:a :b :c])
+(j/get-in o [:a])
+(j/select-keys o [:a :b :c])
 
 ; this does not work:
-(applied-science.js-interop/get o .-x "fallback-value")
+;(j/get o .-x "fallback-value")
