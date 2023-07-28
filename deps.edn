@@ -5,13 +5,19 @@
  {org.clojure/clojure    {:mvn/version "1.10.3"}
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
-  tick/tick {:mvn/version "0.5.0-RC5"}
+  tick/tick {:mvn/version "0.6.2"}
   ;thi.ng/strf {:mvn/version "0.2.2"}
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
   applied-science/js-interop  {:mvn/version "0.3.3"}
-  funcool/promesa {:mvn/version "8.0.450"}
+  funcool/promesa {:mvn/version "9.0.494"}
+
+  ; sci configs is working with this versions:
+  ; applied-science/js-interop {:mvn/version "0.3.3"}
+  ; funcool/promesa {:mvn/version "9.0.494"}
+  ; reagent/reagent {:mvn/version "1.1.0"}
+  ; re-frame/re-frame {:mvn/version "1.3.0"}
   org.babashka/sci.configs {:git/url "https://github.com/babashka/sci.configs.git"
-                            :sha "fcd367c6a6115c5c4e41f3a08ee5a8d5b3387a18"}
+                            :sha "878ffa103a6be088278afa1b027f42749f2ba2a1"}
   ; addlib3 branch
   ; tools.deps.alpha kills shadow-cljs
   ;org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
