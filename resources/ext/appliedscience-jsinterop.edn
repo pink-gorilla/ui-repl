@@ -1,7 +1,6 @@
 {:name "applied-science.js-interop"
  ; build
- :lazy false
- :lazy-sci false ; lazy not yet working.
+ :lazy-sci true
  :cljs-namespace [applied-science.js-interop
                   pinkgorilla.repl.cljs.js-interop
                   sci.configs.applied-science.js-interop]
