@@ -3,10 +3,8 @@
  :lazy-sci true
  :cljs-namespace [pinkgorilla.repl.cljs.js
                   pinkgorilla.repl.cljs.log
-                  pinkgorilla.repl.cljs.http
-                  pinkgorilla.repl.cljs.component
-                  ;thi.ng.strf.core
-                  ]
+                  pinkgorilla.repl.cljs.http]
+ 
  :cljs-ns-bindings {'http {'get-str pinkgorilla.repl.cljs.http/get-str
                            'get-edn pinkgorilla.repl.cljs.http/get-edn
                            'get-json pinkgorilla.repl.cljs.http/get-json
