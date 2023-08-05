@@ -2,7 +2,7 @@
          "resources" ; extension
          ]
  :deps
- {org.clojure/clojure    {:mvn/version "1.10.3"}
+ {org.clojure/clojure    {:mvn/version "1.11.1"}
   ;cljs-ajax/cljs-ajax {:mvn/version "0.8.3"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
   tick/tick {:mvn/version "0.6.2"}
@@ -61,7 +61,7 @@
   {:extra-paths ["target/webly" ; to include the sci-bindings info
                  "node_modules"
                  "demo"]
-   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.553"
+   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.575"
                                         :exclusions  [org.pinkgorilla/ui-repl]}}
    :exec-fn modular.system/start!
    :exec-args {:profile "jetty"
