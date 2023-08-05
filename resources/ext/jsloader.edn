@@ -1,7 +1,8 @@
 {:name "ui-repl-jsloader"
  ; build
  :lazy false
- :cljs-namespace [pinkgorilla.repl.cljs.jsloader]
+ :cljs-namespace [pinkgorilla.repl.cljs.jsloader
+                  pinkgorilla.repl.cljs.component]
  :cljs-ns-bindings {'js-loader {'with-js pinkgorilla.repl.cljs.jsloader/with-js
                                 'browser-defined? pinkgorilla.repl.cljs.jsloader/browser-defined?
                                 'load-always pinkgorilla.repl.cljs.jsloader/load-always
