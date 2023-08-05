@@ -1,6 +1,6 @@
 {:name "ui-repl"
  ; build
- :lazy false ; util fns not yet working with lazy loader
+ :lazy-sci true
  :cljs-namespace [pinkgorilla.repl.cljs.js
                   pinkgorilla.repl.cljs.log
                   pinkgorilla.repl.cljs.http
