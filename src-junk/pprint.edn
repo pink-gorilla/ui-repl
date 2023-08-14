@@ -1,5 +1,0 @@
-{:name "pprint"
- ; build
- :lazy false
- :cljs-namespace [cljs.pprint]
- :cljs-ns-bindings {'pprint {'print-table cljs.pprint/print-table}}}

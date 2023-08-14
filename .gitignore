@@ -24,3 +24,7 @@ goldly_bindings_generated.cljs
 .calva
 .clj-kondo
 /rdocument
+*~
+\#*\#
+.\#*
+.~*

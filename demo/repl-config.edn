@@ -3,4 +3,26 @@
           :routes {:app {"" :demo-dialog
                          "format" :demo-format
                          "http-demo" :demo-http-get
-                         "loadjs" :demo-loadjs}}}}
+                         "loadjs" :demo-loadjs
+
+                         "devtools/scratchpad" :scratchpad
+                         "devtools/viewer" :viewer
+                         "devtools/repl" :repl
+                         "devtools/theme" :theme
+                         "devtools/build" :build
+                         "devtools/runtime" :runtime
+                         "devtools/pages" :pages
+                         "devtools/help" :devtools
+                         "goldly/reload" :goldly/reload-cljs
+
+                         }}}
+
+  :reval {:rdocument  {:storage-root "rdocument/"
+                      :url-root "/api/rdocument/file/"}
+         :collections {:user [:clj "user/notebook/"]
+                       :demo [:clj "demo/notebook/"]
+                       :demo-cljs [:cljs "demo/notebook/"]}}
+
+
+
+ }

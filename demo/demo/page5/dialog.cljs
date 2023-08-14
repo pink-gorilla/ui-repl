@@ -12,6 +12,8 @@
             :border-radius    "6px"
             :text-align "center"}} "Hello modal!"])
 
+; (defn nav [url]  url)
+
 (defn dialog-page [{:keys [_route-params _query-params _handler] :as _route}]
   [:div
 
