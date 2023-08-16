@@ -1,8 +1,12 @@
-{:name "reframe"
+{:name "re-frame"
  ; build
  :lazy false
- :cljs-namespace [re-frame.core]
- :cljs-ns-bindings {'re-frame.core {'dispatch re-frame.core/dispatch
-                                    'subscribe re-frame.core/subscribe
-                                    'reg-event-db re-frame.core/reg-event-db
-                                    'reg-event-fx re-frame.core/reg-event-fx}}}
+ ; sci-lazy not yet supported for sci-config namespaces.
+ :cljs-namespace [re-frame.core
+                  re-frame.db
+                  sci.configs.re-frame.re-frame]
+ :cljs-ns-bindings {'re-frame.core  sci.configs.re-frame.re-frame/re-frame-namespace
+                    're-frame.db sci.configs.re-frame.re-frame/re-frame-db-namespace}
+
+
+ }
