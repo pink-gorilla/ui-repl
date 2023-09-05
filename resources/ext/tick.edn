@@ -2,6 +2,8 @@
  ; build
  :lazy-sci true
  :cljs-namespace [tick.core
+                  cljc.java-time.zone-offset
+                  cljc.java-time.local-date-time
                   pinkgorilla.repl.cljs.tick]
  :cljs-ns-bindings {'tick.core {'now tick.core/now
                                 'today tick.core/today
@@ -34,4 +36,7 @@
                                 'max tick.core/max
                                 'min tick.core/min
                                 }
+                      'cljc.java-time.zone-offset {'utc cljc.java-time.zone-offset/utc}
+                      'cljc.java-time.local-date-time {'to-epoch-second cljc.java-time.local-date-time/to-epoch-second}
+                      
                     'tick.goldly {'dt-format pinkgorilla.repl.cljs.tick/dt-format}}}
