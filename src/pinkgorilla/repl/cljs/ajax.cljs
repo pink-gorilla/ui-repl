@@ -2,10 +2,10 @@
   (:require
    [promesa.core :as p]
    [clojure.edn :as edn]
-   [ajax.core :refer [GET POST PUT]]
+   [ajax.core :refer [GET POST PUT DELETE]]
    [clojure.string :as str]))
 
-(defn- make-promise [AJAX-TYPE]
+(defn make-promise [AJAX-TYPE]
   ([url]
    (make-promise url {}))
   ([url params]
@@ -21,6 +21,7 @@
 (def http-get (make-promise GET))
 (def http-post (make-promise POST))
 (def http-put (make-promise PUT))
+(def http-delete (make-promise DELETE))
 
 
 
