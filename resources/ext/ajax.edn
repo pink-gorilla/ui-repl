@@ -1,5 +1,8 @@
 {:name "ajax"
  ; build
  :lazy false
- :cljs-namespace [pinkgorilla.repl.cljs.load]
- :cljs-ns-bindings {'ajax.core {'GET pinkgorilla.repl.cljs.load/http-get}}}
+ :cljs-namespace [pinkgorilla.repl.cljs.ajax]
+ :cljs-ns-bindings {'ajax.core {'GET pinkgorilla.repl.cljs.ajax/http-get
+                                'POST pinkgorilla.repl.cljs.ajax/http-post
+                                'PUT pinkgorilla.repl.cljs.ajax/http-put
+                                }}}
