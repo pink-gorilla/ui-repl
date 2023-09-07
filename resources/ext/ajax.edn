@@ -1,7 +1,8 @@
 {:name "cljs-ajax"
  ; build
  :lazy false
- :cljs-namespace [pinkgorilla.repl.cljs.ajax]
+ :cljs-namespace [ajax.core
+                  pinkgorilla.repl.cljs.ajax]
  :cljs-ns-bindings {'ajax.core {'GET pinkgorilla.repl.cljs.ajax/http-get
                                 'POST pinkgorilla.repl.cljs.ajax/http-post
                                 'PUT pinkgorilla.repl.cljs.ajax/http-put

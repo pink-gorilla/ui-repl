@@ -20,8 +20,8 @@ clj -X:goldly
 
 To compile js and run:
 ```
-clj -X:goldly:build :profile "npm-install"
-clj -X:goldly:build :profile "compile2"
+clj -X:goldly:build:npm-install
+clj -X:goldly:build:compile
 clj -X:goldly
 ```
 
