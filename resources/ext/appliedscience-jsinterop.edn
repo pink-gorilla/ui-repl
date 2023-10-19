@@ -1,6 +1,6 @@
 {:name "applied-science.js-interop"
  ; build
-  :cljs-namespace [applied-science.js-interop
+ :cljs-namespace [applied-science.js-interop
                   pinkgorilla.repl.cljs.js-interop
                   sci.configs.applied-science.js-interop]
  :cljs-ns-bindings {'applied-science.js-interop sci.configs.applied-science.js-interop/js-interop-namespace
