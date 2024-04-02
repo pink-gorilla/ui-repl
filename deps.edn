@@ -10,7 +10,6 @@
   com.cemerick/url {:mvn/version "0.1.1"}  ; url links
   applied-science/js-interop  {:mvn/version "0.3.3"}
   funcool/promesa {:mvn/version "11.0.674"}
-
   ; sci configs is working with this versions:
   ; applied-science/js-interop {:mvn/version "0.3.3"}
   ; funcool/promesa {:mvn/version "9.0.494"}
@@ -26,12 +25,7 @@
   ; you'll need the version the closure compiler expects
   }
  :aliases
- {;https://github.com/applied-science/deps-library
-  :release
-  {:extra-deps {applied-science/deps-library {:mvn/version "0.4.0"}}
-   :main-opts ["-m" "applied-science.deps-library"]}
-
-  ; https://github.com/weavejester/cljfmt
+ {; https://github.com/weavejester/cljfmt
   :cljfmt
   {:extra-deps {cljfmt/cljfmt {:mvn/version "RELEASE"}}
    :main-opts ["-m" "cljfmt.main" "check" "--indents" "cljfmt.edn"]}
@@ -52,10 +46,7 @@
   {:extra-deps {athos/clj-check {:git/url "https://github.com/athos/clj-check.git"
                                  :sha "0ca84df1357d71429243b99908303f45a934654c"}}
    :main-opts ["-m" "clj-check.check"]}
-
-  :garamond
-  {:extra-deps {com.workframe/garamond {:mvn/version "0.4.0"}}
-   :main-opts ["-m" "garamond.main"]}
+ 
 
   :goldly
   {:extra-paths ["target/webly" ; to include the sci-bindings info
@@ -72,7 +63,7 @@
                :services "goldly/services.edn"
                :config  ["webly/config.edn" "goldly/config.edn" "repl-config.edn"]}}
 
-  :build
+  :gbuild
   {:exec-fn goldly.app.build/goldly-build
    :exec-args {:profile "npm-install"}}
 
@@ -84,9 +75,11 @@
   {:exec-fn goldly.app.build/goldly-build
    :exec-args {:profile "compile2"}}
 
-  :test-addlib
-  {:extra-paths ["dev"]
-   :main-opts ["-m" "add-lib-demo"]}
+    :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
+                slipset/deps-deploy {:mvn/version "0.2.1"}
+                babashka/fs {:mvn/version "0.0.5"}}
+         :ns-default build}
+
 
 ;
   }}
