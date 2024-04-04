@@ -1,6 +1,6 @@
 {:name "tick"
  ; build
- :lazy-sci true
+ :lazy true
  :cljs-namespace [tick.core
                   cljc.java-time.zone-offset
                   cljc.java-time.local-date-time

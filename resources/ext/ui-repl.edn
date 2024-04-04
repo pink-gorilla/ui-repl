@@ -1,15 +1,15 @@
 {:name "ui-repl"
  ; build
- :lazy-sci true
+ :lazy true
  :cljs-namespace [pinkgorilla.repl.cljs.js
                   pinkgorilla.repl.cljs.log
                   pinkgorilla.repl.cljs.http]
- 
- :cljs-ns-bindings {'http {'get-str pinkgorilla.repl.cljs.http/get-str
-                           'get-edn pinkgorilla.repl.cljs.http/get-edn
-                           'get-json pinkgorilla.repl.cljs.http/get-json
-                           'application-url pinkgorilla.repl.cljs.http/application-url
-                           'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
+
+ :cljs-ns-bindings {'pinkgorilla.repl.cljs.http {'get-str pinkgorilla.repl.cljs.http/get-str
+                                                 'get-edn pinkgorilla.repl.cljs.http/get-edn
+                                                 'get-json pinkgorilla.repl.cljs.http/get-json
+                                                 'application-url pinkgorilla.repl.cljs.http/application-url
+                                                 'ws-origin pinkgorilla.repl.cljs.http/ws-origin}
 
                     'goldly.js {'timeout pinkgorilla.repl.cljs.js/timeout
                                 'interval pinkgorilla.repl.cljs.js/interval

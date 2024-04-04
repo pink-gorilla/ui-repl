@@ -1,7 +1,6 @@
 {:name "re-frame"
  ; build
  :lazy false
- ; sci-lazy not yet supported for sci-config namespaces.
  :cljs-namespace [re-frame.core
                   re-frame.db
                   sci.configs.re-frame.re-frame]
