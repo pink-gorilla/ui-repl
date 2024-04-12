@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.cljs.tick
+(ns tick.helper
   (:require
    [tick.core :as t]
    [tick.locale-en-us] ; a locale is needed for date formatting

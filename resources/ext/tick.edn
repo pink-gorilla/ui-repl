@@ -4,7 +4,7 @@
  :cljs-namespace [tick.core
                   cljc.java-time.zone-offset
                   cljc.java-time.local-date-time
-                  pinkgorilla.repl.cljs.tick]
+                  tick.helper]
  :cljs-ns-bindings {'tick.core {'now tick.core/now
                                 'today tick.core/today
                                 'epoch tick.core/epoch
@@ -39,4 +39,4 @@
                       'cljc.java-time.zone-offset {'utc cljc.java-time.zone-offset/utc}
                       'cljc.java-time.local-date-time {'to-epoch-second cljc.java-time.local-date-time/to-epoch-second}
                       
-                    'tick.goldly {'dt-format pinkgorilla.repl.cljs.tick/dt-format}}}
+                    'tick.helper {'dt-format tick.helper/dt-format}}}
