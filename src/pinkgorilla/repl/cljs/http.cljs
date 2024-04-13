@@ -1,7 +1,7 @@
 (ns pinkgorilla.repl.cljs.http
   (:require
    [clojure.edn :as edn]
-   ;[ajax.core]
+   [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [cljs.core.async :refer [<! >! chan close!] :refer-macros [go]]
    [cljs-http.client :as http]
    [cemerick.url :as url]
@@ -13,14 +13,20 @@
                          })]
       (go (let [response (<! (http/get url opts))
                 body (:body response)
-                _ (println "body: " body "type: " (type body))
+                _ (info "body: " body "type: " (type body))
                 data (-> body process)]
             (swap! a assoc-in path data)
             nil)))))
 
 (def get-str (make-get identity))
 
-(def get-edn (make-get identity)) ; edn/read-string
+
+(defn parse-edn [s]
+  (if (string? s)
+    (edn/read-string s)
+    s))
+
+(def get-edn (make-get parse-edn)) 
 
 (defn parse-json [s]
   (-> s js/JSON.parse js->clj))
