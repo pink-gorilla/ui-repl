@@ -1,9 +1,0 @@
-{:name "applied-science.js-interop"
- ; build
- :lazy true
- :cljs-namespace [applied-science.js-interop
-                  pinkgorilla.repl.cljs.js-interop
-                  sci.configs.applied-science.js-interop]
- :cljs-ns-bindings {'applied-science.js-interop sci.configs.applied-science.js-interop/js-interop-namespace
-                    'applied-science.js-interop.goldly {'obj->clj pinkgorilla.repl.cljs.js-interop/obj->clj
-                                                        'value-of pinkgorilla.repl.cljs.js-interop/value-of}}}
