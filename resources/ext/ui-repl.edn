@@ -18,9 +18,6 @@
                                                'parse-float pinkgorilla.repl.cljs.js/parse-float
                                                'jsx->clj  pinkgorilla.repl.cljs.js/jsx->clj
                                                'to-fixed pinkgorilla.repl.cljs.js/to-fixed}
-                    'pinkgorilla.repl.cljs.log {'info pinkgorilla.repl.cljs.log/info
-                                                'warn pinkgorilla.repl.cljs.log/warn
-                                                'error pinkgorilla.repl.cljs.log/error}
                     ;'f {'format thi.ng.strf.core/format
                     ;    'float thi.ng.strf.core/float}
                     }}
