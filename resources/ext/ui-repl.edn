@@ -2,7 +2,6 @@
  ; build
  :lazy true
  :cljs-namespace [pinkgorilla.repl.cljs.js
-                  pinkgorilla.repl.cljs.log
                   pinkgorilla.repl.cljs.http]
 
  :cljs-ns-bindings {'pinkgorilla.repl.cljs.http {'get-str pinkgorilla.repl.cljs.http/get-str
