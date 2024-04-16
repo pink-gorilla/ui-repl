@@ -3,7 +3,7 @@
    [goldly.page :as page]
    [goog.string]
    [tick.core :as t]
-   [tick.goldly]
+   [tick.helper]
    [goldly.js :refer [parse-float to-fixed]]))
 
 (parse-float "34")
@@ -38,7 +38,7 @@
    [:p "date (format with 3 numbers): " (goog.string/format "%s %s %s" 2021 11 13)]
 
    [:h1 "dt-format"]
-   [:p "date (instant) format: " (tick.goldly/dt-format "YYYYMMdd HH:mm:ss" (tick.core/now))]
+   [:p "date (instant) format: " (tick.helper/dt-format "YYYYMMdd HH:mm:ss" (tick.core/now))]
    ])
 
 (page/add format-page :demo-format)

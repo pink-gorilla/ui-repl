@@ -1,8 +1,8 @@
 (ns demo.notebook.format
   (:require
    [tick.core :as t]
-   [tick.goldly :refer [dt-format]]
-   [goldly.js :refer [to-fixed]]
+   [tick.helper :refer [dt-format]]
+   [pinkgorilla.repl.cljs.js :refer [to-fixed]]
    [goog.string :refer [format]]))
 
 (dt-format "YYYYMMdd HH:mm:ss" (t/now))
