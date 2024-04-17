@@ -1,9 +1,0 @@
-{:name "goog.string"
- ; build
- :lazy false
- :cljs-namespace [pinkgorilla.repl.cljs.format
-                  goog.string.format
-                  goog.string]
- :cljs-ns-bindings {'goog.string {'format goog.string/format}}
- ; 
- }
