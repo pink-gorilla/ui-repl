@@ -1,7 +1,7 @@
 {:name "goog.string"
  ; build
  :lazy true
- :cljs-namespace [goog.string]
- :cljs-ns-bindings {'goog.string {'format goog.string/format}
+ :cljs-namespace [pinkgorilla.goog.string]
+ :cljs-ns-bindings {'pinkgorilla.goog.string {'format pinkgorilla.goog.string/format}
   
                     }}

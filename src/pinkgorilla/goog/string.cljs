@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.cljs.format
+(ns pinkgorilla.goog.string
   (:require
    [goog.string :as gstring]
    [goog.string.format]
