@@ -2,10 +2,20 @@
   (:require
    [clojure.edn :as edn]
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
-   [cljs.core.async :refer [<! >! chan close!] :refer-macros [go]]
+   [cljs.core.async :refer [<!] :refer-macros [go]]
    [cljs-http.client :as http]
    [cemerick.url :as url]
    [clojure.string :as str]))
+
+;; this needs to go. core.async cannot be used in sci clojurescript. 580 stars
+;; clj-ajax has 670 stars 
+
+;; used in:
+;; pink-gorilla/reval/reval-ui/src/reval/helper/url_loader.cljs
+;; --> so it is clear that reval needs to be rewriten first.
+;; pink-gorilla/webly/demo/src/demo/page/help.cljs
+;; pink-gorilla/ui-repl/resources/demo/notebook/load_js.cljs
+;; pink-gorilla/demo/src/page/leaflet_iss.cljs
 
 (defn- make-get [process]
   (fn [url a path & [opts]]
@@ -20,13 +30,12 @@
 
 (def get-str (make-get identity))
 
-
 (defn parse-edn [s]
   (if (string? s)
     (edn/read-string s)
     s))
 
-(def get-edn (make-get parse-edn)) 
+(def get-edn (make-get parse-edn))
 
 (defn parse-json [s]
   (-> s js/JSON.parse js->clj))
