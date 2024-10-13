@@ -20,8 +20,15 @@
                                 'date-time tick.core/date-time
                                 'inst tick.core/inst
                                 'instant tick.core/instant
+                                'instant? tick.core/instant?
                                 'zoned-date-time tick.core/zoned-date-time
+                                'zoned-date-time? tick.core/zoned-date-time?
                                 'offset-date-time tick.core/offset-date-time
+                                ; zone 
+                                'in tick.core/in
+                                'at tick.core/at
+                                'UTC tick.core/UTC
+                                'current-zone tick.core/current-zone
                                 ; to string and from string
                                 'formatter tick.core/formatter
                                 'format tick.core/format
@@ -35,6 +42,7 @@
                                 '>= tick.core/>=
                                 'max tick.core/max
                                 'min tick.core/min
+                                'truncate tick.core/truncate
                                 }
                       'cljc.java-time.zone-offset {'utc cljc.java-time.zone-offset/utc}
                       'cljc.java-time.local-date-time {'to-epoch-second cljc.java-time.local-date-time/to-epoch-second}
