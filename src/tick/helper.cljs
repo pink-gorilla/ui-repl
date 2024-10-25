@@ -5,5 +5,7 @@
    ))
 
 (defn dt-format [fmt dt]
+  ;; note: this implicitly converts to local time!!
+  ;; quanta.studio has a UTC version.
   (let [dtz (t/zoned-date-time dt)]
     (t/format (t/formatter fmt) dtz)))

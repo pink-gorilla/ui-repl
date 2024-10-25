@@ -6,6 +6,12 @@ This functions are not in goldly (which provides cljs kernel) or nrepl-middlewar
 This functions are not many, but if they are included in the kernels, it is more difficult to
 test and fine tune the functions.
 
+## Todo
+- rename to ui-browser or ui-tools.
+- move stuff fomr pinkie (react catch, js-loader)
+- rnd grid from ui-input
+
+
 ## End-Users
 - this project is NOT for you! Instead go to:
 - [goldly](https://github.com/pink-gorilla/goldly)
