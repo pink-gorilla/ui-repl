@@ -33,40 +33,10 @@
   {:extra-deps {athos/clj-check {:git/url "https://github.com/athos/clj-check.git"
                                  :sha "0ca84df1357d71429243b99908303f45a934654c"}}
    :main-opts ["-m" "clj-check.check"]}
- 
 
-  :goldly
-  {:extra-paths ["target/webly" ; to include the sci-bindings info
-                 "node_modules"
-                 "demo"]
-   :extra-deps {org.pinkgorilla/goldly {:mvn/version "0.4.611"
-                                        :exclusions  [org.pinkgorilla/ui-repl]}
-                org.pinkgorilla/devtools {:mvn/version "0.0.10"
-                                          :exclusions  [org.pinkgorilla/ui-repl]}
-                org.pinkgorilla/ui-bidi {:mvn/version "0.0.15"}
-                }
-   :exec-fn modular.system/start!
-   :exec-args {:profile "jetty"
-               :services "goldly/services.edn"
-               :config  ["webly/config.edn" "goldly/config.edn" "repl-config.edn"]}}
-
-  :gbuild
-  {:exec-fn goldly.app.build/goldly-build
-   :exec-args {:profile "npm-install"}}
-
-  :npm-install
-  {:exec-fn goldly.app.build/goldly-build
-   :exec-args {:profile "npm-install"}}
-  
-  :compile
-  {:exec-fn goldly.app.build/goldly-build
-   :exec-args {:profile "compile2"}}
-
-    :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
-                slipset/deps-deploy {:mvn/version "0.2.1"}
-                babashka/fs {:mvn/version "0.0.5"}}
-         :ns-default build}
-
+  :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
+                 slipset/deps-deploy {:mvn/version "0.2.1"}}
+          :ns-default build}
 
 ;
   }}

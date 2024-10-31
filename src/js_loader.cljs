@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.cljs.jsloader
+(ns js-loader
   (:require
    [reagent.core :as r]
    [goog.object :as g]

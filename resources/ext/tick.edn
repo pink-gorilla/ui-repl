@@ -40,6 +40,8 @@
                                 '<= tick.core/<=
                                 '> tick.core/>
                                 '>= tick.core/>=
+                                '>> tick.core/>>
+                                '<< tick.core/<<
                                 'max tick.core/max
                                 'min tick.core/min
                                 'truncate tick.core/truncate

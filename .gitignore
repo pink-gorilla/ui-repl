@@ -4,12 +4,7 @@ pom.xml.asc
 *.class
 /lib/
 /classes/
-/target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
+target/
 .nrepl-port
 .cpcache/
 karma.conf.js
@@ -17,8 +12,7 @@ package.json
 package-lock.json
 shadow-cljs.edn
 .shadow-cljs
-/node_modules
-goldly_bindings_generated.cljs
+node_modules
 .lsp
 .webly
 .calva

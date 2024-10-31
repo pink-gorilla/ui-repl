@@ -1,4 +1,4 @@
-(ns pinkgorilla.repl.cljs.component
+(ns component
   (:require
    [taoensso.timbre :as timbre :refer-macros [trace debug debugf info warn error]]
    [clojure.string]

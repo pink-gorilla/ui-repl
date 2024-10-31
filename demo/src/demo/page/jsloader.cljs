@@ -1,16 +1,11 @@
-(ns demo.page5.jsloader
+(ns demo.page.jsloader
   (:require
-   [goldly.page :as page]
-   [js-loader :refer [with-js browser-defined? load-always component]]
-   [goldly.log :refer [info warn error]]))
+   [js-loader :refer [with-js browser-defined? load-always]]
+   [component :refer [component]]
+   ))
 
-(defn loadjs-page [{:keys [_route-params _query-params _handler] :as _route}]
+(defn page [{:keys [_route-params _query-params _handler] :as _route}]
   [:div
-
-   (info "showing loadjs-page")
-   (warn "showing loadjs-page")
-   (error "showing loadjs-page")
-
    [:div.bg-yellow-500
     "load a simple file"]
    [with-js {load-always "/r/repl/test1.js"}
@@ -38,4 +33,3 @@
 ;
    ])
 
-(page/add loadjs-page :demo-loadjs)

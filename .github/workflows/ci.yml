@@ -27,9 +27,6 @@ jobs:
       uses: DeLaGuardo/setup-clojure@3.5
       with:
         cli: 1.10.3.1029 # Clojure CLI based on tools.deps
-    - name: npm-install
-      run: |
-        clojure -X:goldly:gbuild
     - name: Release
       if: success()
       # if: github.event_name == 'push'
@@ -40,6 +37,5 @@ jobs:
       run: |
         git config --global user.email "ci@pinkgorilla.org"
         git config --global user.name "CI/CD"
-        rm src/goldly_bindings_generated.cljs
         clojure -T:build jar
         clojure -T:build deploy

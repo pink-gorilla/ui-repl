@@ -1,6 +1,5 @@
-(ns demo.page5.format
+(ns demo.page.format
   (:require
-   [goldly.page :as page]
    [goog.string]
    [tick.core :as t]
    [tick.helper]
@@ -22,7 +21,7 @@
 ;  (when dt
 ;    (dt-format "YYYYMMdd" dt)))
 
-(defn format-page [{:keys [_route-params _query-params _handler] :as _route}]
+(defn page [{:keys [_route-params _query-params _handler] :as _route}]
   [:div
 
    [:h1 "to-fixed"]
@@ -41,4 +40,3 @@
    [:p "date (instant) format: " (tick.helper/dt-format "YYYYMMdd HH:mm:ss" (tick.core/now))]
    ])
 
-(page/add format-page :demo-format)
