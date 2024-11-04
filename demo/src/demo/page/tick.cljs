@@ -1,7 +1,9 @@
 (ns demo.page.tick
   (:require
    [reagent.core :as r]
-   [tick.core :as t]))
+   [tick.core :as t]
+   [tick.editor :refer [instant-editor]]
+   ))
 
 (def day1 (t/new-duration 1 :days))
 
@@ -15,12 +17,15 @@
   [:div.bg-blue-300
    [:button {:on-click #(swap! dt-a move-back)} "<"]
    [:button {:on-click #(swap! dt-a move-forward)} ">"]
-   [:p (str @dt-a)]])
+   [:span (str @dt-a)]
+   [instant-editor {:instant-a dt-a}]
+   ])
 
 (defn page [{:keys [_route-params _query-params _handler] :as _route}]
-  (let [dt-a (r/atom (t/instant))]
+  (let [dt-a (r/atom (-> (t/instant) (t/truncate :seconds)))]
     (fn [{:keys [_route-params _query-params _handler] :as _route}]
       [:div
        [dt-scroller dt-a]
+       
     
     ])))
