@@ -14,7 +14,6 @@
 ;; pink-gorilla/reval/reval-ui/src/reval/helper/url_loader.cljs
 ;; --> so it is clear that reval needs to be rewriten first.
 ;; pink-gorilla/webly/demo/src/demo/page/help.cljs
-;; pink-gorilla/ui-repl/resources/demo/notebook/load_js.cljs
 ;; pink-gorilla/demo/src/page/leaflet_iss.cljs
 
 (defn- make-get [process]
