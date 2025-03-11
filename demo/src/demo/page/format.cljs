@@ -3,7 +3,7 @@
    [goog.string]
    [tick.core :as t]
    [tick.helper]
-   [goldly.js :refer [parse-float to-fixed]]))
+   [pinkgorilla.repl.cljs.js :refer [parse-float to-fixed]]))
 
 (parse-float "34")
 

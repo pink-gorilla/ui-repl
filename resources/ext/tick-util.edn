@@ -1,0 +1,7 @@
+{:name "tick-util"
+ ; build
+ :lazy true
+ :cljs-namespace [tick.helper
+                  tick.editor]
+ :cljs-ns-bindings {'tick.helper {'dt-format tick.helper/dt-format}
+                    'tick.editor {'instant-editor tick.editor/instant-editor}}}

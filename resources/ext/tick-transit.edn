@@ -1,5 +1,6 @@
 {:name "tick-transit"
  ; build
  :lazy false
+ :depends-on #{}
  :cljs-namespace [tick.transit]
  :cljs-ns-bindings {'tick.transit {'add-tick-transit-encoding tick.transit/add-tick-transit-encoding}}}

@@ -1,16 +1,18 @@
 {:name "demo"
+ :lazy true ; must be true
+ :depends-on #{:ui-repl :tick-util}
+ :cljs-namespace [demo.page.format
+                  demo.page.http
+                  demo.page.jsloader
+                  demo.page.main
+                  demo.page.tick]
  
- ; we want to not compile anything here with shadow-cljs,
- ; so we can test the sci-mappings.
+ :cljs-ns-bindings {'demo.page.format {'page demo.page.format/page}
+                    'demo.page.http {'page demo.page.http/page}
+                    'demo.page.jsloader {'page  demo.page.jsloader/page}
+                    'demo.page.main {'page demo.page.main/page}
+                    'demo.page.tick {'page demo.page.tick/page}}
 
- ;:lazy true ; must be true, since it depends on techml-dataset-cljs
- ;:depends-on #{:tick}
- #_:cljs-namespace #_[demo.page.main/page
-                  demo.page.date/page
-                  demo.page.format/page
-                  demo.page.http/page
-                  demo.page.jsloader/page]
- 
  :cljs-routes  {"" demo.page.main/page
                 "http" demo.page.http/page
                 "jsloader" demo.page.jsloader/page
